@@ -1,3 +1,11 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+
+def welcome_message():
+    print("Welcome to your nightmare, the journey to madness has begun but how crazy can it truly get?")
+
+    while True:
+        username = input("What is your name?")
+
+        if not username:
+            print("Please enter your name")
+        else:
+            break
