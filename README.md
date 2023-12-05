@@ -1,32 +1,50 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Into Your Mind
 
-Welcome,
+Welcome to Into Your Mind this app was created with Python and deployed with Heroku. This game was designed to lead players through the madness option text based game called into your mind, this game will have different options allowing the player to decide where they would like to go next, but pick carefully as picking the wrong option can result in game over.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## CONTENTS
 
-## Reminders
+## Project Goals
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### User Stories 
 
-## Creating the Heroku app
+* I would like to view the instructions to understand how to play the game.
+* I would like to be able to enter my own name to create my own character.
+* I would like to be able to make clear decisions that have an impact on the game.
+* I would like my decisions to have importance with clear descriptions on what happens next.
+* I would like to restart or exit the game at any point if I was to make a wrong decision.
+* I Would like to return to the main menu at any time to view any further instructions I may have missed.
+* I like story driven text based adventures which have a clear explanation on the world and its surroundings. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Flow Chart 
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Key Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Welcome Message
 
-Connect your GitHub repository and deploy as normal.
+* This element will allow users to enter there first name. Which allows them to create there own character, making the experience more personalised for themselves.
 
-## Constraints
+## Languages 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Frameworks & Tools 
 
----
+## Deployment 
 
-Happy coding!
+### How to deploy 
+
+### How to fork
+
+### How to clone
+
+## Testing 
+
+## Credits 
+
+### Media 
+
+#### Code
+
+#### Content 
+
+#### Acknowledgements
