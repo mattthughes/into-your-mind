@@ -28,13 +28,21 @@ def intro(username):
     allowing them to view the instructions or start the game
     """
 
-    start = input("Welcome to Into Your Mind if you would like to Start the game type A or if you would like to view the instructions type B\n")
+    print("Welcome to Into Your Mind if you would like to Start the game type A or if you would like to view the instructions type B")
 
-    if start == "A".lower():
-        run_game()
-    elif start == "B".lower():
-        view_instructions()
-    else:
-        print("Please enter a valid format")
+    while True:
+        try:
+            start = input("Please type either A or B\n")
+            if start == "A".lower():
+                run_game()
+                break
+            elif start == "B".lower():
+                view_instructions()
+                break
+            else:
+                print("Please enter a valid format\n")
+        except ValueError:
+            print("\n Invalid format please pick the correct one")
+
 
 welcome_message()
