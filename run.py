@@ -32,17 +32,17 @@ def intro(username):
 
     while True:
         try:
-            start = input("Please type either A or B\n")
-            if start == "A".lower():
+            start = input("Please type either A or B\n").upper()
+            if start == "A":
                 run_game()
                 break
-            elif start == "B".lower():
+            elif start == "B":
                 view_instructions()
                 break
             else:
                 print("Please enter a valid format\n")
-        except ValueError:
-            print("\n Invalid format please pick the correct one")
+        except ValueError as e:
+            print(f"\n {e} please pick the correct one")
 
 
 welcome_message()
