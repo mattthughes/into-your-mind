@@ -16,8 +16,46 @@ def welcome_message():
             intro(username)
             break
 
+def open_door():
+    print("open door")
+
 def escaped_classroom(username):
-    print("Escaped classroom")
+    """
+    This function is the second section of the game, this allows the user 
+    to pick one out of three options
+    """
+
+    print("As you escape the class room you notice a small dog in the corridor")
+    print("Do you A go and pet the dog. B turn aroun or C throw your book at the dog")
+
+    while True:
+        try:
+            escaped_choice = input("Please type either A or B or C\n")
+            if escaped_choice == "A":
+                print("You throw a science book at the dog causing an explosion")
+                print("killing the dog, well done you live to fight another day")
+                open_door()
+                break
+            elif escaped_choice == "B":
+                print("You turn around and you spot an even bigger dog, before you can react")
+                print("the dog bites you try to escape but you feel yourself slowing losing control")
+                print("you faint and as you lay there you can feel yourself getting weaker as you slowly lose your ")
+                print("soul to the underworld ")
+                print("Please try again")
+                welcome_message()
+                break
+            elif escaped_choice == "C":
+                print("\nYou pet the dog and the dog turns around and bites you,")
+                print("you have been lost to the underworld forever\n")
+                print("Please try again\n")
+                welcome_message()
+                break
+            else:
+                print(f"Please use the correct format by typing either A or B or C {username}")
+                continue
+        except ValueError as e:
+            print("Invalid format please try again")
+
 
 def run_game(username):
     """
@@ -35,7 +73,7 @@ def run_game(username):
             if first_choice == "A":
                 print("\nYou go back to sleep and the principle rushes in and throws a slice of pizza at your head")
                 print("A massive fear of yours you faint and die please try again\n")
-                intro(username)
+                welcome_message()
                 break
             elif first_choice == "B":
                 print("\nYou hide in the cupboard and watch the principal storm into the classroom after searching the classroom he")
@@ -47,7 +85,7 @@ def run_game(username):
                 print("You do your best but you fail the maths test, the principal laughs sniggering at you")
                 print("repeating you will remain here forever HAHAHAHAHA!\n")
                 print("Please try again.\n")
-                intro(username)
+                welcome_message()
                 break
             else:
                 print("Please enter the correct format either A or B or C\n")
@@ -76,7 +114,7 @@ def view_instructions(username):
                 run_game(username)
                 break
             elif start == "B":
-                intro(username)
+                welcome_message()
                 break
             else:
                 print("\nPlease enter the correct format by either typing A or B")
