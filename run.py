@@ -13,13 +13,13 @@ def welcome_message():
         if not username:
             print("Please enter your name\n")
         else:
-            intro()
+            intro(username)
             break
 
 def run_game():
     print("running game")
 
-def view_instructions():
+def view_instructions(username):
     print("Viewing instructions")
     """
     This function will display the instructions to the user
@@ -48,13 +48,13 @@ def view_instructions():
             print("Invalid format please use the correct format")
             
 
-def intro():
+def intro(username):
     """
     This function will intro the user to the game 
     allowing them to view the instructions or start the game
     """
 
-    print("Welcome to Into Your Mind if you would like to Start the game type A or if you would like to view the instructions type B")
+    print(f"Welcome to Into Your Mind {username} if you would like to Start the game type A or if you would like to view the instructions type B")
 
     while True:
         try:
