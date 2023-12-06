@@ -13,7 +13,7 @@ def welcome_message():
         if not username:
             print("Please enter your name\n")
         else:
-            intro(username)
+            intro()
             break
 
 def run_game():
@@ -21,8 +21,34 @@ def run_game():
 
 def view_instructions():
     print("Viewing instructions")
+    """
+    This function will display the instructions to the user
+    teaching them how the game works and any key information
+    they will need while playing the game
+    """
 
-def intro(username):
+    print("Instructions")
+    print( "Into Your Mind is a text based action adventure game where your decisions really matter")
+    print("During the game you will recieve a situation where your answer matters you will select your options by either typing A or B or C")
+    print("Depending on the situation you find yourself in think carefully as the wrong answer could mean Game Over")
+    print("If you would like to leave the game early at any point you can type EXIT to leave the application")
+
+    while True:
+        try:
+            start = input("Please type either A to start the game or B to return to the main menu\n").upper()
+            if start == "A":
+                run_game()
+                break
+            elif start == "B":
+                intro()
+                break
+            else:
+                print("\nPlease enter the correct format by either typing A or B")
+        except ValueError as e:
+            print("Invalid format please use the correct format")
+            
+
+def intro():
     """
     This function will intro the user to the game 
     allowing them to view the instructions or start the game
@@ -32,11 +58,11 @@ def intro(username):
 
     while True:
         try:
-            start = input("Please type either A or B\n").upper()
-            if start == "A":
+            intro_msg = input("Please type either A or B\n").upper()
+            if intro_msg == "A":
                 run_game()
                 break
-            elif start == "B":
+            elif intro_msg == "B":
                 view_instructions()
                 break
             else:
