@@ -16,19 +16,55 @@ def welcome_message():
             intro(username)
             break
 
-def run_game():
-    print("running game")
+def escaped_classroom(username):
+    print("Escaped classroom")
+
+def run_game(username):
+    """
+    This is the first section of the game this function will allow the user 
+    to read a senario and make a decision
+    """
+
+    print("\nYou wake up in detention and you hear the principal in the background storming to your class room")
+    print("You have three choices do you A go back to sleep and pretend its all just a bad dream. B wait for the principal to arrive")
+    print("or C do you hide in the cupboard away from the principal?")
+
+    while True:
+        try:
+            first_choice = input(f"\nPlease type either A or B or C pick carefully {username}\n").upper()
+            if first_choice == "A":
+                print("\nYou go back to sleep and the principle rushes in and throws a slice of pizza at your head")
+                print("A massive fear of yours you faint and die please try again\n")
+                intro(username)
+                break
+            elif first_choice == "B":
+                print("\nYou hide in the cupboard and watch the principal storm into the classroom after searching the classroom he")
+                print(f"shortly leaves after. You have escaped for now {username}\n")
+                escaped_classroom(username)
+                break
+            elif first_choice == "C":
+                print("\nYou wait for the principal who has backup one of your biggest fears a maths test.")
+                print("You do your best but you fail the maths test, the principal laughs sniggering at you")
+                print("repeating you will remain here forever HAHAHAHAHA!\n")
+                print("Please try again.\n")
+                intro(username)
+                break
+            else:
+                print("Please enter the correct format either A or B or C\n")
+                continue
+        except ValueError as e:
+            print(f"Invalid format please enter the correct format user {username}")
+                
 
 def view_instructions(username):
-    print("Viewing instructions")
     """
     This function will display the instructions to the user
     teaching them how the game works and any key information
     they will need while playing the game
     """
 
-    print("Instructions")
-    print( "Into Your Mind is a text based action adventure game where your decisions really matter")
+    print("\nInstructions")
+    print("Into Your Mind is a text based action adventure game where your decisions really matter")
     print("During the game you will recieve a situation where your answer matters you will select your options by either typing A or B or C")
     print("Depending on the situation you find yourself in think carefully as the wrong answer could mean Game Over")
     print("If you would like to leave the game early at any point you can type EXIT to leave the application")
@@ -37,10 +73,10 @@ def view_instructions(username):
         try:
             start = input("Please type either A to start the game or B to return to the main menu\n").upper()
             if start == "A":
-                run_game()
+                run_game(username)
                 break
             elif start == "B":
-                intro()
+                intro(username)
                 break
             else:
                 print("\nPlease enter the correct format by either typing A or B")
@@ -60,15 +96,14 @@ def intro(username):
         try:
             intro_msg = input("Please type either A or B\n").upper()
             if intro_msg == "A":
-                run_game()
+                run_game(username)
                 break
             elif intro_msg == "B":
-                view_instructions()
+                view_instructions(username)
                 break
             else:
                 print("Please enter a valid format\n")
         except ValueError as e:
             print(f"\n {e} please pick the correct one")
-
 
 welcome_message()
