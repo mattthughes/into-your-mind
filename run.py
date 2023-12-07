@@ -1,3 +1,9 @@
+import time
+
+def output_delay(text_msg):
+    for i in text_msg:
+        print(i, end="", flush=True)
+        time.sleep(0.1)
 
 def welcome_message():
     """
@@ -5,7 +11,7 @@ def welcome_message():
     enter there first name
     """
 
-    print("Welcome to your nightmare, the journey to madness has begun but how crazy can it truly get?")
+    output_delay("Welcome to your nightmare, the journey to madness has begun but how crazy can it truly get?\n")
 
     while True:
         username = input("What is your name?\n")
@@ -100,6 +106,7 @@ def run_game(username):
     This is the first section of the game this function will allow the user 
     to read a senario and make a decision
     """
+    print("Starting game....")
 
     print("\nYou wake up in detention and you hear the principal in the background storming to your class room.")
     print("You have three choices do you A go back to sleep and pretend its all just a bad dream. B wait for the principal to arrive")
