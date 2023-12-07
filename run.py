@@ -16,8 +16,46 @@ def welcome_message():
             intro(username)
             break
 
-def open_door():
-    print("open door")
+def abandoned_bus(username):
+    print("Abandoned bus")
+
+def open_door(username):
+    """ 
+    This function id the third section of the game
+    allowing the user to pick one out of three options
+    """
+    print("\nAs you explore the abandoned school you notice an open door and an open window.")
+    print("Do you A go through the door. B slam the door shut or C go through the open window and escape.\n")
+
+    while True:
+        try:
+            open_door_choice = input("Please type either A or B or C\n").upper()
+            if open_door_choice == "A":
+                print("You went through the open door, and were attacked and then eaten by an alien, one of your")
+                print("biggest fears you die.\n")
+                welcome_message()
+                break
+            elif open_door_choice == "B":
+                print("You slammed the door shut and alerted the principal, he")
+                print("finds you and takes you to his office. The principal begins to laugh at you")
+                print("you get up and try and escape but the door is locked the principal begins to laugh")
+                print(f"even more and starts to repeat you are here forever {username} HAHAHAHAHAHA!\n")
+                print("Please try again.\n")
+                welcome_message()
+                break
+            elif open_door_choice == "C":
+                print("You went through the open window leading you to the outside playground.")
+                print("escaping the monster through the open door.\n")
+                print(f"You escaped for now {username}\n")
+                abandoned_bus(username)
+                break
+            else:
+                print("Please pick a valid format by either typing A or B or C.\n")
+                continue
+        except ValueError as e:
+            print(f"{e} please fill in the right format\n")
+
+
 
 def escaped_classroom(username):
     """
@@ -34,7 +72,7 @@ def escaped_classroom(username):
             if escaped_choice == "A":
                 print("You throw a science book at the dog causing an explosion")
                 print("killing the dog, well done you live to fight another day.")
-                open_door()
+                open_door(username)
                 break
             elif escaped_choice == "B":
                 print("You turn around and you spot an even bigger dog, before you can react")
