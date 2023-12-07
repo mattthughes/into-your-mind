@@ -22,8 +22,40 @@ def welcome_message():
             intro(username)
             break
 
+def journey_home(username):
+    print("Journey home")
+
 def abandoned_bus(username):
-    print("Abandoned bus")
+    """ 
+    This function will inform the user of the next senario giving them 
+    two options to pick from 
+    """
+    text_msg = """
+    You find an open school bus leading you out of the school.
+    Do you A go through the school bus and head out the open 
+    door or B hide under the bus seats.
+    """
+    output_delay(text_msg)
+
+    while True:
+        try:
+            bus_choice = input("Please type either A or B\n").upper()
+            if bus_choice == "A":
+                output_delay("You go through the open bus and spot an exit, you quickly make a dash for the exit and escape the school.\n")
+                output_delay("Now to find the way home and fast.\n")
+                journey_home(username)
+                break
+            elif bus_choice == "B":
+                output_delay("You went through the open bus and hid under the seats, suddenly all the chewing gum under\n")
+                output_delay("the seats has grown to the size of the school bus. Before you can react the chewing gum monster smothers you,\n")
+                output_delay("takes your soul banishing you to the underworld forever.\n")
+                welcome_message()
+                break
+            else:
+                print(f"invalid format {username} Please type either A or B")
+                continue
+        except ValueError as e:
+            print("Invalid format please type either A or B")
 
 def open_door(username):
     """ 
@@ -54,7 +86,7 @@ def open_door(username):
                 welcome_message()
                 break
             elif open_door_choice == "C":
-                output_delay("You went through the open window leading you to the outside playground.")
+                output_delay("You went through the open window leading you to the outside playground.\n")
                 output_delay("escaping the monster through the open door.\n")
                 output_delay(f"You escaped for now {username}\n")
                 abandoned_bus(username)
@@ -83,20 +115,20 @@ def escaped_classroom(username):
         try:
             escaped_choice = input("\nPlease type either A or B or C.\n").upper()
             if escaped_choice == "A":
-                output_delay("You throw a science book at the dog causing an explosion")
-                output_delay("killing the dog, well done you live to fight another day.")
+                output_delay("You throw a science book at the dog causing an explosion\n")
+                output_delay("killing the dog, well done you live to fight another day.\n")
                 open_door(username)
                 break
             elif escaped_choice == "B":
-                output_delay("You turn around and you spot an even bigger dog, before you can react")
-                output_delay("the dog bites you try to escape but you feel yourself slowing losing control,")
-                output_delay("you faint and as you lay there you can feel yourself getting weaker. As you slowly lose your ")
-                output_delay("soul to the underworld.")
-                output_delay("Please try again.")
+                output_delay("You turn around and you spot an even bigger dog, before you can react\n")
+                output_delay("the dog bites you try to escape but you feel yourself slowing losing control,\n")
+                output_delay("you faint and as you lay there you can feel yourself getting weaker. As you slowly lose your\n")
+                output_delay("soul to the underworld.\n")
+                output_delay("Please try again.\n")
                 welcome_message()
                 break
             elif escaped_choice == "C":
-                output_delay("\nYou pet the dog and the dog turns around and bites you,")
+                output_delay("\nYou pet the dog and the dog turns around and bites you,\n")
                 output_delay("you have been lost to the underworld forever.\n")
                 output_delay("Please try again.\n")
                 welcome_message()
