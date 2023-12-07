@@ -11,7 +11,7 @@ def welcome_message():
     enter there first name
     """
 
-    output_delay("Welcome to your nightmare, the journey to madness has begun but how crazy can it truly get?\n")
+    output_delay("\nWelcome to your nightmare, the journey to madness has begun but how crazy can it truly get?\n")
 
     while True:
         username = input("What is your name?\n")
@@ -30,12 +30,16 @@ def open_door(username):
     This function id the third section of the game
     allowing the user to pick one out of three options
     """
-    output_delay("\nAs you explore the abandoned school you notice an open door and an open window.")
-    output_delay("Do you A go through the door. B slam the door shut or C go through the open window and escape.\n")
+    text_msg = """
+    As you explore the abandoned school you notice an open door and an open window.
+    Do you A go through the door. B slam the door shut or C go through the open window and escape.
+    """
+
+    output_delay(text_msg)
 
     while True:
         try:
-            open_door_choice = input("Please type either A or B or C\n").upper()
+            open_door_choice = input("\nPlease type either A or B or C\n").upper()
             if open_door_choice == "A":
                 output_delay("You went through the open door, and were attacked and then eaten by an alien, one of your\n")
                 output_delay("biggest fears you die.\n")
@@ -68,13 +72,16 @@ def escaped_classroom(username):
     This function is the second section of the game, this allows the user 
     to pick one out of three options
     """
+    text_msg = """
+    As you escape the classroom you notice a small dog in the corridor.
+    Do you A throw your book at the dog. B turn around or C pet the dog.
+    """
 
-    output_delay("As you escape the classroom you notice a small dog in the corridor.")
-    output_delay("Do you A throw your book at the dog. B turn around or C pet the dog.")
+    output_delay(text_msg)
 
     while True:
         try:
-            escaped_choice = input("Please type either A or B or C.\n").upper()
+            escaped_choice = input("\nPlease type either A or B or C.\n").upper()
             if escaped_choice == "A":
                 output_delay("You throw a science book at the dog causing an explosion")
                 output_delay("killing the dog, well done you live to fight another day.")
@@ -106,14 +113,16 @@ def run_game(username):
     This is the first section of the game this function will allow the user 
     to read a senario and make a decision
     """
-    output_delay("Starting game....")
-
-    output_delay("\nYou wake up in detention and you hear the principal in the background storming to your class room.\n")
-    output_delay("You have three choices do you A go back to sleep and pretend its all just a bad dream. B wait for the principal to arrive\n")
-    output_delay("or C do you hide in the cupboard away from the principal?")
+    output_delay("Starting game....\n")
+    text_msg = """
+    You wake up in detention and you hear the principal in the background storming to your class room.
+    You have three choices do you A go back to sleep and pretend its all just a bad dream. 
+    B wait for the principal to arrive or C do you hide in the cupboard away from the principal?\n"""
+    output_delay(text_msg)
 
     while True:
         try:
+            
             first_choice = input(f"\nPlease type either A or B or C pick carefully {username}\n").upper()
             if first_choice == "A":
                 output_delay("\nYou go back to sleep and the principal rushes in and throws a slice of pizza at your head. which is\n")
@@ -145,12 +154,15 @@ def view_instructions(username):
     teaching them how the game works and any key information
     they will need while playing the game
     """
-    output_delay("\nInstructions")
-    output_delay("\nInto Your Mind is a text based action adventure game where your decisions really matter.\n")
-    output_delay("During the game you will recieve a situation where your answer matters, you will select your options by either typing A or B or C.\n")
-    output_delay("Depending on the situation you find yourself in think carefully as the wrong answer could mean Game Over.\n")
-    output_delay("If you would like to leave the game early at any point you can type EXIT to leave the application\n")
+    output_delay("\nInstructions loading....\n")
 
+    text_msg = """
+    Into Your Mind is a text based action adventure game where your decisions really matter.
+    During the game you will recieve a situation where your answer matters, you will select your options by either typing A or B or C.
+    Depending on the situation you find yourself in think carefully as the wrong answer could mean Game Over.
+    If you would like to leave the game early at any point you can type EXIT to leave the application.
+    """
+    output_delay(text_msg)
     while True:
         try:
             start = input("\nPlease type either A to start the game or B to return to the main menu\n").upper()
@@ -176,7 +188,7 @@ def intro(username):
 
     while True:
         try:
-            intro_msg = input("Please type either A or B\n").upper()
+            intro_msg = input("\nPlease type either A or B\n").upper()
             if intro_msg == "A":
                 run_game(username)
                 break
