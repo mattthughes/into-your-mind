@@ -105,15 +105,15 @@ def abandoned_bus(username):
     """
     output_delay(text_msg)
 
-    bus_choice_a = """\n
+    bus_choice_a = """
     You go through the open bus and spot an exit,
     you quickly make a dash for the exit and
     escape the school. Now to find the way
     home and fast.
     """
-    bus_choice_b = """\n
+    bus_choice_b = """
     You went through the open bus and hid under
-    the seats, suddenly all the chewing up under
+    the seats, suddenly all the chewing gum under
     the seats has grown to the size of the school
     bus. Before you can react the chewing gum
     monster smothers you, takes your souls,
@@ -209,7 +209,7 @@ def escaped_classroom(username):
     """
 
     escaped_choice_a = """
-    \nYou throw a science book at the dog causing an explosion
+    You throw a science book at the dog causing an explosion
     killing the dog, well done you live to fight another day.
     """
 
@@ -325,7 +325,7 @@ def view_instructions(username):
     as the wrong answer could mean Game Over.
     If you would like to leave the game early at any point
     you can type EXIT to leave the application.
-    Type A to the start the game or Type B to return to
+    Type A to start the game or Type B to return to
     the main menu
     """
     output_delay(text_msg)

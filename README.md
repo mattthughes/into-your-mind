@@ -18,6 +18,11 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
 
 ## Flow Chart 
 
+This is how into your mind will work each decision the user makes will lead to a specific senario whether that is viewing the instructions or just progressing in the game each decision the user makes has an outcome. This flow chart has allowed me to outline the logic I am looking to follow which means during production there will be no logic gaps and everything will work as I intended.
+
+![Flow chart logic part 1](docs/into-your-mind-logic-part-1.png)
+![Flow chart logic part 2](docs/into-your-mind-logic-part-2.png)
+![Flow chart full diagram](docs/into-your-mind-logic-full-flow-chart.png)
 
 ## Key Features
 
