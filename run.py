@@ -1,8 +1,9 @@
 import time
 
+
 def output_delay(text_msg):
     """
-    This function controls the speed output of the 
+    This function controls the speed output of the
     text using flush to print to the console immedaietly
     then using the time.sleep method to control the speed of the
     output
@@ -11,9 +12,10 @@ def output_delay(text_msg):
         print(i, end="", flush=True)
         time.sleep(0.07)
 
+
 def loading_elements(loading):
     """
-    This function controls the speed output of the 
+    This function controls the speed output of the
     text using flush to print to the console immedaietly
     then using the time.sleep method to control the speed of the
     output
@@ -22,13 +24,17 @@ def loading_elements(loading):
         print(i, end="", flush=True)
         time.sleep(0.1)
 
+
 def welcome_message():
     """
-    This function will greet the user and allow them to 
+    This function will greet the user and allow them to
     enter there first name
     """
-
-    output_delay("\nWelcome to your nightmare, the journey to madness has begun but how crazy can it truly get?\n")
+    text_msg = """
+    Welcome to your nightmare, the journey to madness has begun
+    but how crazy can it truly get?
+    """
+    output_delay(text_msg)
 
     while True:
         username = input("What is your name?\n")
@@ -38,12 +44,15 @@ def welcome_message():
         else:
             intro(username)
             break
+
+
 def inside_station(username):
     print("\nInside station")
 
+
 def journey_home(username):
     """
-    This function will inform the user of the next senario giving them 
+    This function will inform the user of the next senario giving them
     two options to pick from
     """
 
@@ -57,32 +66,35 @@ def journey_home(username):
         try:
             home_choice = input("\nPlease type either A or B\n").upper()
             if home_choice == "A":
-                output_delay("You waited for the police and they take you to the police station\n")
+                output_delay("You waited for the police and \n")
+                output_delay("they take you to the police station")
                 output_delay(f"You are safe for now {username}.")
                 inside_station(username)
                 break
             elif home_choice == "B":
-                output_delay("You kept walking home as you continue walking a large figure appears\n")
-                output_delay("they open a blackhole which sucks you in leaving you stuck in the void forver.\n")
+                output_delay("You kept walking home as you continue walking\n")
+                output_delay("a large figure appears\n")
+                output_delay("they open a blackhole .\n")
+                output_delay("which sucks you in leaving\n")
+                output_delay("you stuck in the void forver.")
                 output_delay("Please try again.\n")
                 welcome_message()
                 break
             else:
-                output_delay("\nPlease use the correct format by typing either A or B.\n")
+                output_delay("\nPlease type either A or B.\n")
                 continue
         except ValueError as e:
             print(f"{e} please use the correct format")
 
-        
 
 def abandoned_bus(username):
-    """ 
-    This function will inform the user of the next senario giving them 
-    two options to pick from 
+    """
+    This function will inform the user of the next senario giving them
+    two options to pick from
     """
     text_msg = """
     You find an open school bus leading you out of the school.
-    Do you A go through the school bus and head out the open 
+    Do you A go through the school bus and head out the open
     door or B hide under the bus seats?
     """
     output_delay(text_msg)
@@ -91,14 +103,22 @@ def abandoned_bus(username):
         try:
             bus_choice = input("\nPlease type either A or B\n").upper()
             if bus_choice == "A":
-                output_delay("\nYou go through the open bus and spot an exit, you quickly make a dash for the exit and escape the school.\n")
+                output_delay("\nYou go through the open bus\n")
+                output_delay("and spot an exit,\n")
+                output_delay("you quickly make a dash for the exit\n")
+                output_delay("and escape the school.\n")
                 output_delay("Now to find the way home and fast.\n")
                 journey_home(username)
                 break
             elif bus_choice == "B":
-                output_delay("\nYou went through the open bus and hid under the seats, suddenly all the chewing gum under\n")
-                output_delay("the seats has grown to the size of the school bus. Before you can react the chewing gum monster smothers you,\n")
-                output_delay("takes your soul banishing you to the underworld forever.\n")
+                output_delay("\nYou went through the open bus and hid under\n")
+                output_delay("the seats, suddenly all the chewing gum under\n")
+                output_delay("the seats has grown to\n")
+                output_delay("the size of the school bus.\n")
+                output_delay("Before you can react\n")
+                output_delay("the chewing gum monster smothers you,\n")
+                output_delay("takes your soul\n")
+                output_delay("banishing you to the underworld forever.\n")
                 welcome_message()
                 break
             else:
@@ -107,35 +127,46 @@ def abandoned_bus(username):
         except ValueError as e:
             print("Invalid format please type either A or B")
 
+
 def open_door(username):
-    """ 
+    """
     This function id the third section of the game
     allowing the user to pick one out of three options
     """
     text_msg = """
-    As you explore the abandoned school you notice an open door and an open window.
-    Do you A go through the door. B slam the door shut or C go through the open window and escape.
+    As you explore the abandoned school you notice an open door
+    and an open window.
+    Do you A go through the door. B slam the door shut or C go
+    through the open window and escape.
+    """
+
+    option_b = f"""
+    You slammed the door shut and alerted the principal, he
+    finds you and takes you to his office. The principal
+    begins to laugh at you get up and try and escape
+    but the door is locked the principal begins to laugh
+    even more and starts to repeat you are
+    here forever {username} HAHAHAHAHAHA!Please try again.
     """
 
     output_delay(text_msg)
 
     while True:
         try:
-            open_door_choice = input("\nPlease type either A or B or C\n").upper()
-            if open_door_choice == "A":
-                output_delay("\nYou went through the open door, and were attacked and then eaten by an alien, one of your\n")
+            door_choice = input("\nPlease type either A or B or C\n").upper()
+            if door_choice == "A":
+                output_delay("\nYou went through the open door,\n")
+                output_delay("and were attacked and then eaten by an alien,\n")
+                output_delay("one of your\n")
                 output_delay("biggest fears you die.\n")
                 welcome_message()
                 break
-            elif open_door_choice == "B":
-                output_delay("\nYou slammed the door shut and alerted the principal, he\n")
-                output_delay("finds you and takes you to his office. The principal begins to laugh at you\n")
-                output_delay("you get up and try and escape but the door is locked the principal begins to laugh\n")
-                output_delay(f"even more and starts to repeat you are here forever {username} HAHAHAHAHAHA!\n")
+            elif door_choice == "B":
+                output_delay(option_b)
                 output_delay("Please try again.\n")
                 welcome_message()
                 break
-            elif open_door_choice == "C":
+            elif door_choice == "C":
                 output_delay("\nYou went through the open window leading you to the outside playground.\n")
                 output_delay("escaping the monster through the open door.\n")
                 output_delay(f"You escaped for now {username}\n")
