@@ -1,11 +1,23 @@
 import time
 
 def output_delay(text_msg):
+    """
+    This function controls the speed output of the 
+    text using flush to print to the console immedaietly
+    then using the time.sleep method to control the speed of the
+    output
+    """
     for i in text_msg:
         print(i, end="", flush=True)
         time.sleep(0.07)
 
 def loading_elements(loading):
+    """
+    This function controls the speed output of the 
+    text using flush to print to the console immedaietly
+    then using the time.sleep method to control the speed of the
+    output
+    """
     for i in loading:
         print(i, end="", flush=True)
         time.sleep(0.1)
@@ -26,9 +38,42 @@ def welcome_message():
         else:
             intro(username)
             break
+def inside_station(username):
+    print("\nInside station")
 
 def journey_home(username):
-    print("Journey home")
+    """
+    This function will inform the user of the next senario giving them 
+    two options to pick from
+    """
+
+    text_msg = """
+    As you are walking home you hear a police siren in the background.
+    Do you A wait for the police or do you B keep walking.
+    """
+    output_delay(text_msg)
+
+    while True:
+        try:
+            home_choice = input("\nPlease type either A or B\n").upper()
+            if home_choice == "A":
+                output_delay("You waited for the police and they take you to the police station\n")
+                output_delay(f"You are safe for now {username}.")
+                inside_station(username)
+                break
+            elif home_choice == "B":
+                output_delay("You kept walking home as you continue walking a large figure appears\n")
+                output_delay("they open a blackhole which sucks you in leaving you stuck in the void forver.\n")
+                output_delay("Please try again.\n")
+                welcome_message()
+                break
+            else:
+                output_delay("\nPlease use the correct format by typing either A or B.\n")
+                continue
+        except ValueError as e:
+            print(f"{e} please use the correct format")
+
+        
 
 def abandoned_bus(username):
     """ 
@@ -38,7 +83,7 @@ def abandoned_bus(username):
     text_msg = """
     You find an open school bus leading you out of the school.
     Do you A go through the school bus and head out the open 
-    door or B hide under the bus seats.
+    door or B hide under the bus seats?
     """
     output_delay(text_msg)
 
