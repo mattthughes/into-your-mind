@@ -46,8 +46,64 @@ def welcome_message():
             break
 
 
+def small_figure(username):
+    print("small figure")
+
+
 def inside_station(username):
     print("\nInside station")
+
+    text_msg = """
+    You are in the police station waiting for your parents
+    as you wait for your parents, you hear a loud scream.
+    Do you A go and see what the scream was or B wait for
+    your parents or C hide in the station.
+    """
+
+    output_delay(text_msg)
+
+    inside_choice_a = """
+    You hid away from the screaming creature but the police
+    officer grabs you from underneath the chair, without
+    hesitation the police officer fires his gun at you,
+    he kills you, proving you cannot trust anyone in this
+    world.
+    """
+
+    inside_choice_b = """
+    You waited for your parents and the large creature has
+    broken free, the creature grabs you as they escape taking
+    you with them,killing you in the process.
+    """
+
+    inside_choice_c = """
+    You are brave and go to see what the scream was, and its
+    a very small figure, you cannot believe your eyes it's
+    you.....
+    """
+
+    while True:
+        try:
+            inside_choice = input("Please type A or B or C\n").upper()
+            if inside_choice == "A":
+                output_delay(inside_choice_a)
+                output_delay("Please try again\n")
+                welcome_message()
+                break
+            elif inside_choice == "B":
+                output_delay(inside_choice_b)
+                output_delay("Please try again\n")
+                welcome_message()
+                break
+            elif inside_choice == "C":
+                output_delay(inside_choice_c)
+                small_figure()
+                break
+            else:
+                output_delay("Please type A or B or C\n")
+                continue
+        except ValueError as e:
+            output_delay("Please type A or B or C\n")
 
 
 def journey_home(username):
