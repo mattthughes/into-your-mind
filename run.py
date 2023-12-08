@@ -30,7 +30,7 @@ def welcome_message():
     This function will greet the user and allow them to
     enter there first name
     """
-    text_msg = """\n
+    text_msg = """
     Welcome to your nightmare, the journey to madness has begun
     but how crazy can it truly get?
     """
@@ -56,18 +56,18 @@ def journey_home(username):
     two options to pick from
     """
 
-    text_msg = """\n
+    text_msg = """
     As you are walking home you hear a police siren in the background.
     Do you A wait for the police or do you B keep walking.
     """
     output_delay(text_msg)
 
-    home_option_a = f"""\n
+    home_option_a = f"""
     You waited for the police and they take you
     to the police station you are safe for now
     {username}"""
 
-    home_option_b = """\n
+    home_option_b = """
     You kept walking home as you continue walking a
     large figure appears they open a blackhole.
     Which sucks in leaving you stuck in the void
@@ -98,7 +98,7 @@ def abandoned_bus(username):
     This function will inform the user of the next senario giving them
     two options to pick from
     """
-    text_msg = """\n
+    text_msg = """
     You find an open school bus leading you out of the school.
     Do you A go through the school bus and head out the open
     door or B hide under the bus seats?
@@ -144,28 +144,28 @@ def open_door(username):
     This function id the third section of the game
     allowing the user to pick one out of three options
     """
-    text_msg = """\n
+    text_msg = """
     As you explore the abandoned school you notice an open door
     and an open window.
     Do you A go through the door. B slam the door shut or C go
     through the open window and escape.
     """
-    door_option_a = """\n
+    door_option_a = """
     You went through the open door, were attacked
     and then eaten by an alien one of your
     biggest fears you die.
     """
 
-    door_option_b = f"""\n
+    door_option_b = f"""
     You slammed the door shut and alerted the principal, he
     finds you and takes you to his office. The principal
     begins to laugh at you get up and try and escape
     but the door is locked the principal begins to laugh
     even more and starts to repeat you are
-    here forever {username} HAHAHAHAHAHA!Please try again.
+    here forever {username} HAHAHAHAHAHA!.
     """
 
-    door_option_c = f"""\n
+    door_option_c = f"""
     You went through the open window leading you
     to the outside playground, escaping the
     monster through the open door. You escaped
@@ -203,24 +203,24 @@ def escaped_classroom(username):
     This function is the second section of the game, this allows the user
     to pick one out of three options
     """
-    text_msg = """\n
+    text_msg = """
     As you escape the classroom you notice a small dog in the corridor.
     Do you A throw your book at the dog. B turn around or C pet the dog.
     """
 
-    escaped_choice_a = """\n
+    escaped_choice_a = """
     \nYou throw a science book at the dog causing an explosion
     killing the dog, well done you live to fight another day.
     """
 
-    escaped_choice_b = """\n
+    escaped_choice_b = """
     You turn around and you spot an even bigger dog, before you can react
     the dog bites you try to escape but you feel yourself slowing losing
     control, you faint and as you lay there you can feel yourself
     getting weaker. As you slowly lose your soul to the underworld.
     """
 
-    escaped_choice_c = """\n
+    escaped_choice_c = """
     You pet the dog and the dog turns around and bites you,
     you have been lost to the underworld forever.
     """
@@ -256,7 +256,7 @@ def run_game(username):
     to read a senario and make a decision
     """
     loading_elements("Starting game....\n")
-    text_msg = """\n
+    text_msg = """
     You wake up in detention and you hear the principal in the
     background storming to your class room. You have three choices
     do you A go back to sleep and pretend its all just a bad dream.
@@ -264,18 +264,18 @@ def run_game(username):
     away from the principal?\n
     """
 
-    first_choice_a = """\n
+    first_choice_a = """
     You go back to sleep and the principal rushes in and
     throws a slice of pizza at your head. which is
     a massive fear of yours, you faint and die
     """
 
-    first_choice_b = f"""\n
+    first_choice_b = f"""
     You hide in the cupboard and watch the principal storm into the classroom
     after searching the classroom he shortly leaves after.
     You have escaped for now {username}
     """
-    first_choice_c = """\n
+    first_choice_c = """
     You wait for the principal who has backup one of your biggest
     fears a maths test. You do your best but you fail the maths test,
     the principal laughs sniggering at you repeating you will remain here
@@ -350,10 +350,11 @@ def intro(username):
     allowing them to view the instructions or start the game
     """
 
-    introduction = f"""
-    \nWelcome to Into Your Mind {username} if you would like to Start the game
-     type A or if you would like to view the instructions type B
-     """
+    text_msg = f"""
+    Welcome to Into Your Mind {username} if you would like to Start the game
+    type A or if you would like to view the instructions type B
+    """
+    output_delay(text_msg)
 
     while True:
         try:
