@@ -45,9 +45,63 @@ def welcome_message():
             intro(username)
             break
 
+def final_battle(username):
+    print("Final battle")
 
 def small_figure(username):
-    print("small figure")
+    text_msg = f"""
+    You cannot believe what you are seeing, this can't be right
+    Do you A go and confront this small figure. B fight this figure
+    or C do you run away. How brave are you {username}?
+    """
+
+    figure_choice_a = """
+    You confront the small figure, and he laughs at you, begins to
+    explain that he is the leader of this underworld and once he has
+    dealt with you. He will be free to plague all of humanity escaping
+    the underworld, you are unprepared for this and the imposter
+    kills you escaping the underworld.
+    """
+
+    figure_choice_b = """
+    You choose to fight the imposter catching them off guard
+    it's a hellacious battle but you survive for now.
+    """
+
+    figure_choice_c = """
+    You chose to run away the imposter smiles to themselves
+    and begins to chase you. As you escape the police station
+    you are hit by a car, as you lay there slowly dying, before
+    you pass you hear a faint laugh in the distance, you can't
+    believe what you are seeing it's the principal from the school
+    cackling as they drive past your lifeless corpse.
+    """
+
+    output_delay(text_msg)
+
+    while True:
+        try:
+            figure_choice = input("Please type A or B or C").upper()
+            if figure_choice == "A":
+                output_delay(figure_choice_a)
+                output_delay("Please try again")
+                welcome_message()
+                break
+            elif figure_choice == "B":
+                output_delay(figure_choice_b)
+                final_battle(username)
+                break
+            elif figure_choice == "C":
+                output_delay(figure_choice_c)
+                output_delay("Please try again")
+                welcome_message()
+                break
+            else:
+                output_delay("Please enter either A or B or C")
+                continue
+        except ValueError as e:
+            output_delay(f"{e} Please use the correct format")
+
 
 
 def inside_station(username):
@@ -56,8 +110,8 @@ def inside_station(username):
     text_msg = """
     You are in the police station waiting for your parents
     as you wait for your parents, you hear a loud scream.
-    Do you A go and see what the scream was or B wait for
-    your parents or C hide in the station.
+    Do you A hide in the station or B wait for your parents or
+    C go and see what the scream was.
     """
 
     output_delay(text_msg)
@@ -97,7 +151,7 @@ def inside_station(username):
                 break
             elif inside_choice == "C":
                 output_delay(inside_choice_c)
-                small_figure()
+                small_figure(username)
                 break
             else:
                 output_delay("Please type A or B or C\n")
@@ -326,16 +380,17 @@ def run_game(username):
     a massive fear of yours, you faint and die
     """
 
-    first_choice_b = f"""
-    You hide in the cupboard and watch the principal storm into the classroom
-    after searching the classroom he shortly leaves after.
-    You have escaped for now {username}
-    """
-    first_choice_c = """
+    first_choice_b = """
     You wait for the principal who has backup one of your biggest
     fears a maths test. You do your best but you fail the maths test,
     the principal laughs sniggering at you repeating you will remain here
     forever HAHAHAHAHA!
+    """
+    
+    first_choice_c = f"""
+    You hide in the cupboard and watch the principal storm into the classroom
+    after searching the classroom he shortly leaves after.
+    You have escaped for now {username}
     """
 
     output_delay(text_msg)
@@ -350,12 +405,13 @@ def run_game(username):
                 break
             elif first_choice == "B":
                 output_delay(first_choice_b)
-                escaped_classroom(username)
+                output_delay("Please try again.\n")
+                welcome_message()
+                
                 break
             elif first_choice == "C":
                 output_delay(first_choice_c)
-                output_delay("Please try again.\n")
-                welcome_message()
+                escaped_classroom(username)
                 break
             else:
                 print("Please enter the correct format either A or B or C\n")
