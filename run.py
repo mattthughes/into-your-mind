@@ -1,5 +1,8 @@
 import time
+import os
 
+def clear():
+    os.system("clear")
 
 def output_delay(text_msg):
     """
@@ -12,7 +15,6 @@ def output_delay(text_msg):
         print(i, end="", flush=True)
         time.sleep(0.07)
 
-
 def loading_elements(loading):
     """
     This function controls the speed output of the
@@ -23,7 +25,7 @@ def loading_elements(loading):
     for i in loading:
         print(i, end="", flush=True)
         time.sleep(0.1)
-
+ 
 
 def welcome_message():
     """
@@ -49,6 +51,7 @@ def final_battle(username):
     print("Final battle")
 
 def small_figure(username):
+    clear()
     text_msg = f"""
     You cannot believe what you are seeing, this can't be right
     Do you A go and confront this small figure. B fight this figure
@@ -105,8 +108,7 @@ def small_figure(username):
 
 
 def inside_station(username):
-    print("\nInside station")
-
+    clear()
     text_msg = """
     You are in the police station waiting for your parents
     as you wait for your parents, you hear a loud scream.
@@ -165,7 +167,7 @@ def journey_home(username):
     This function will inform the user of the next senario giving them
     two options to pick from
     """
-
+    clear()
     text_msg = """
     As you are walking home you hear a police siren in the background.
     Do you A wait for the police or do you B keep walking.
@@ -208,6 +210,8 @@ def abandoned_bus(username):
     This function will inform the user of the next senario giving them
     two options to pick from
     """
+    clear()
+
     text_msg = """
     You find an open school bus leading you out of the school.
     Do you A go through the school bus and head out the open
@@ -254,6 +258,8 @@ def open_door(username):
     This function id the third section of the game
     allowing the user to pick one out of three options
     """
+    clear()
+
     text_msg = """
     As you explore the abandoned school you notice an open door
     and an open window.
@@ -313,6 +319,8 @@ def escaped_classroom(username):
     This function is the second section of the game, this allows the user
     to pick one out of three options
     """
+    clear()
+
     text_msg = """
     As you escape the classroom you notice a small dog in the corridor.
     Do you A throw your book at the dog. B turn around or C pet the dog.
@@ -365,6 +373,7 @@ def run_game(username):
     This is the first section of the game this function will allow the user
     to read a senario and make a decision
     """
+    clear()
     loading_elements("Starting game....\n")
     text_msg = """
     You wake up in detention and you hear the principal in the
@@ -426,6 +435,7 @@ def view_instructions(username):
     teaching them how the game works and any key information
     they will need while playing the game
     """
+    clear()
     loading_elements("\nInstructions loading....\n")
 
     text_msg = """
@@ -461,7 +471,7 @@ def intro(username):
     This function will intro the user to the game
     allowing them to view the instructions or start the game
     """
-
+    clear()
     text_msg = f"""
     Welcome to Into Your Mind {username} if you would like to Start the game
     type A or if you would like to view the instructions type B
