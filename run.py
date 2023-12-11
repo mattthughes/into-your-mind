@@ -2,7 +2,14 @@ import time
 import os
 
 def clear():
+    """
+    This function is using the os.system from 
+    os and is using the phrase clear allowing
+    me to control when the terminal clears 
+    making sure the terminal remains neat.
+    """
     os.system("clear")
+
 
 def output_delay(text_msg):
     """
@@ -15,6 +22,7 @@ def output_delay(text_msg):
         print(i, end="", flush=True)
         time.sleep(0.07)
 
+
 def loading_elements(loading):
     """
     This function controls the speed output of the
@@ -25,7 +33,11 @@ def loading_elements(loading):
     for i in loading:
         print(i, end="", flush=True)
         time.sleep(0.1)
- 
+
+
+def exit_program():
+    print("Thank you for playing")
+
 
 def welcome_message():
     """
@@ -47,8 +59,92 @@ def welcome_message():
             intro(username)
             break
 
+def end(username):
+    text_msg = f"""
+    Congratulations you have beaten the game,
+    I guess its not what you expected have you 
+    really escaped the imposter or is he still
+    out there planning his revenge to once and 
+    for all take over the world. Have you really
+    escaped or did he let you escape, or was it all
+    just a bad dream I guess that is up to you {username}
+    to decide. If you would like to play the game again
+    type A or if you would like to exit type EXIT
+    """
+    output_delay(text_msg)
+    
+    while True:
+        try:
+            end_choice = input("Please type either A or EXIT").upper()
+            if end_choice == "A":
+                run_game(username)
+                break
+            elif end_choice == "EXIT":
+                exit_program()
+                break
+            else:
+                output_delay("Please type either A or EXIT")
+                continue
+        except ValueError as e:
+            output_delay(f"{e} Please type either A or EXIT")
+
+                
 def final_battle(username):
-    print("Final battle")
+    clear()
+    text_msg = """
+    The imposter has escaped and you are free to
+    either A fight this imposter  or B go home.
+    """
+
+    final_choice_a = """
+    You confront yourself and fight with everything you
+    have. As you are about to defeat this evil version 
+    of you wake up, all the students around you look 
+    mortified. As they notice the tears running down
+    your face the principal walks in and asks if you 
+    are okay. As you look down at your notepad that 
+    'real' battle you were supposdly in has ended
+    and was all just a dream. You begin to turn 
+    the pages extremley quickly, you notice every
+    decision you thought you made was all part
+    of your imagination.
+    """
+
+    final_choice_b = """
+    You chose to go home as you enter your house
+    your parents are just sitting there, as you 
+    try and talk to them they just ignore you,
+    pretending you do not exist. You try to go 
+    to sleep but cannot sleep. All the fears you
+    have ever had come to life before you. As
+    you try to escape you are smothered by the 
+    monsters. As you are slowly fading you notice
+    in the distance the imposter sniggering at you
+    as they repeat HAHAHAHA YOU ARE TRAPPED FOREVER!
+    You have been trapped in the underworld forever.
+    """
+
+    output_delay(text_msg)
+
+    while True:
+        try:
+            final_choice = input("Please type either A or B").upper()
+            if final_choice == "A":
+                output_delay(final_choice_a)
+                end(username)
+                break
+            elif final_choice == "B":
+                output_delay(final_choice_b)
+                output_delay("Please try again")
+                welcome_message()
+                break
+            else:
+                output_delay("Please type either A or B")
+                continue
+        except ValueError as e:
+            output_delay(f"{e} Please type either A or B")
+
+
 
 def small_figure(username):
     clear()
