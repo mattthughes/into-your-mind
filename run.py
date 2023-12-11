@@ -1,11 +1,13 @@
 import time
 import os
+import sys
+
 
 def clear():
     """
-    This function is using the os.system from 
+    This function is using the os.system from
     os and is using the phrase clear allowing
-    me to control when the terminal clears 
+    me to control when the terminal clears
     making sure the terminal remains neat.
     """
     os.system("clear")
@@ -35,8 +37,9 @@ def loading_elements(loading):
         time.sleep(0.1)
 
 
-def exit_program():
-    print("Thank you for playing")
+def exit_program(username):
+    print(f"Thank you for playing {username}")
+    sys.exit()
 
 
 def welcome_message():
@@ -59,12 +62,13 @@ def welcome_message():
             intro(username)
             break
 
+
 def end(username):
     text_msg = f"""
     Congratulations you have beaten the game,
-    I guess its not what you expected have you 
+    I guess its not what you expected have you
     really escaped the imposter or is he still
-    out there planning his revenge to once and 
+    out there planning his revenge to once and
     for all take over the world. Have you really
     escaped or did he let you escape, or was it all
     just a bad dream I guess that is up to you {username}
@@ -72,7 +76,7 @@ def end(username):
     type A or if you would like to exit type EXIT
     """
     output_delay(text_msg)
-    
+
     while True:
         try:
             end_choice = input("Please type either A or EXIT").upper()
@@ -80,7 +84,7 @@ def end(username):
                 run_game(username)
                 break
             elif end_choice == "EXIT":
-                exit_program()
+                exit_program(username)
                 break
             else:
                 output_delay("Please type either A or EXIT")
@@ -88,7 +92,7 @@ def end(username):
         except ValueError as e:
             output_delay(f"{e} Please type either A or EXIT")
 
-                
+
 def final_battle(username):
     clear()
     text_msg = """
@@ -98,13 +102,13 @@ def final_battle(username):
 
     final_choice_a = """
     You confront yourself and fight with everything you
-    have. As you are about to defeat this evil version 
-    of you wake up, all the students around you look 
+    have. As you are about to defeat this evil version
+    of you wake up, all the students around you look
     mortified. As they notice the tears running down
-    your face the principal walks in and asks if you 
-    are okay. As you look down at your notepad that 
+    your face the principal walks in and asks if you
+    are okay. As you look down at your notepad that
     'real' battle you were supposdly in has ended
-    and was all just a dream. You begin to turn 
+    and was all just a dream. You begin to turn
     the pages extremley quickly, you notice every
     decision you thought you made was all part
     of your imagination.
@@ -112,12 +116,12 @@ def final_battle(username):
 
     final_choice_b = """
     You chose to go home as you enter your house
-    your parents are just sitting there, as you 
+    your parents are just sitting there, as you
     try and talk to them they just ignore you,
-    pretending you do not exist. You try to go 
+    pretending you do not exist. You try to go
     to sleep but cannot sleep. All the fears you
     have ever had come to life before you. As
-    you try to escape you are smothered by the 
+    you try to escape you are smothered by the
     monsters. As you are slowly fading you notice
     in the distance the imposter sniggering at you
     as they repeat HAHAHAHA YOU ARE TRAPPED FOREVER!
@@ -138,12 +142,14 @@ def final_battle(username):
                 output_delay("Please try again")
                 welcome_message()
                 break
+            elif final_choice == "EXIT":
+                exit_program(username)
+                break
             else:
                 output_delay("Please type either A or B")
                 continue
         except ValueError as e:
             output_delay(f"{e} Please type either A or B")
-
 
 
 def small_figure(username):
@@ -195,12 +201,14 @@ def small_figure(username):
                 output_delay("Please try again")
                 welcome_message()
                 break
+            elif figure_choice == "EXIT":
+                exit_program(username)
+                break
             else:
                 output_delay("Please enter either A or B or C")
                 continue
         except ValueError as e:
             output_delay(f"{e} Please use the correct format")
-
 
 
 def inside_station(username):
@@ -251,6 +259,9 @@ def inside_station(username):
                 output_delay(inside_choice_c)
                 small_figure(username)
                 break
+            elif inside_choice == "EXIT":
+                exit_program(username)
+                break
             else:
                 output_delay("Please type A or B or C\n")
                 continue
@@ -294,6 +305,8 @@ def journey_home(username):
                 output_delay("Please try again.\n")
                 welcome_message()
                 break
+            elif home_choice == "EXIT":
+                exit_program(username)
             else:
                 output_delay("\nPlease type either A or B.\n")
                 continue
@@ -342,6 +355,8 @@ def abandoned_bus(username):
                 output_delay("Please try again")
                 welcome_message()
                 break
+            elif bus_choice == "EXIT":
+                exit_program(username)
             else:
                 print(f"invalid format {username} Please type either A or B")
                 continue
@@ -403,6 +418,9 @@ def open_door(username):
                 output_delay(door_option_c)
                 abandoned_bus(username)
                 break
+            elif door_choice == "EXIT":
+                exit_program(username)
+                break
             else:
                 output_delay("Please type either A or B or C.\n")
                 continue
@@ -457,6 +475,9 @@ def escaped_classroom(username):
                 output_delay("Please try again.\n")
                 welcome_message()
                 break
+            elif escaped_choice == "EXIT":
+                exit_program(username)
+                break
             else:
                 print(f"Please type either A or B or C. {username}\n")
                 continue
@@ -491,7 +512,7 @@ def run_game(username):
     the principal laughs sniggering at you repeating you will remain here
     forever HAHAHAHAHA!
     """
-    
+
     first_choice_c = f"""
     You hide in the cupboard and watch the principal storm into the classroom
     after searching the classroom he shortly leaves after.
@@ -512,11 +533,14 @@ def run_game(username):
                 output_delay(first_choice_b)
                 output_delay("Please try again.\n")
                 welcome_message()
-                
+
                 break
             elif first_choice == "C":
                 output_delay(first_choice_c)
                 escaped_classroom(username)
+                break
+            elif first_choice == "EXIT":
+                exit_program(username)
                 break
             else:
                 print("Please enter the correct format either A or B or C\n")
@@ -556,6 +580,8 @@ def view_instructions(username):
             elif start == "B":
                 intro(username)
                 break
+            elif start == "EXIT":
+                exit_program(username)
             else:
                 output_delay("\nPlease enter either A or B")
         except ValueError as e:
