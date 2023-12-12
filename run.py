@@ -42,6 +42,38 @@ def exit_program(username):
     sys.exit()
 
 
+def game_over(username):
+    text_msg = """
+    
+██╗░░░██╗░█████╗░██╗░░░██╗  ██████╗░██╗███████╗██████╗░
+╚██╗░██╔╝██╔══██╗██║░░░██║  ██╔══██╗██║██╔════╝██╔══██╗
+░╚████╔╝░██║░░██║██║░░░██║  ██║░░██║██║█████╗░░██║░░██║
+░░╚██╔╝░░██║░░██║██║░░░██║  ██║░░██║██║██╔══╝░░██║░░██║
+░░░██║░░░╚█████╔╝╚██████╔╝  ██████╔╝██║███████╗██████╔╝
+░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚═════╝░╚═╝╚══════╝╚═════╝░
+
+Please try again if you would like to restart the game type
+A. If you would like to return to the main menu type B or if
+you would like to exit the game type EXIT.
+    """
+
+    output_delay(text_msg)
+
+    while True:
+        try:
+            game_over_choice = input("Please type A or B or EXIT").upper()
+            if game_over_choice == "A":
+                run_game(username)
+            elif game_over_choice == "B":
+                welcome_message()
+            elif game_over_choice == "EXIT":
+                exit_program(username)
+            else:
+                output_delay("Please enter A or B or EXIT")
+        except ValueError as e:
+            output_delay("Please enter A or B or EXIT")
+
+
 def welcome_message():
     """
     This function will greet the user and allow them to
@@ -531,9 +563,7 @@ def run_game(username):
                 break
             elif first_choice == "B":
                 output_delay(first_choice_b)
-                output_delay("Please try again.\n")
-                welcome_message()
-
+                game_over(username)
                 break
             elif first_choice == "C":
                 output_delay(first_choice_c)
