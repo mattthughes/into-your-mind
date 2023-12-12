@@ -32,7 +32,16 @@ This is how into your mind will work each decision the user makes will lead to a
 
 ## Languages 
 
+* Python
+
 ## Frameworks & Tools 
+
+- [Git Hub](https://github.com/)
+- [Git](https://git-scm.com/)
+- [Code Anywhere](https://codeanywhere.com/solutions/collaborate)
+- [Fsy symbols](https://fsymbols.com/text-art/)
+- [Heroku](https://www.heroku.com/)
+- [Python Validator](https://pep8ci.herokuapp.com/#)
 
 ## Deployment 
 
