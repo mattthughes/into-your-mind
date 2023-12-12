@@ -181,8 +181,7 @@ def final_battle(username):
                 break
             elif final_choice == "B":
                 output_delay(final_choice_b)
-                output_delay("Please try again\n")
-                welcome_message()
+                game_over(username)
                 break
             elif final_choice == "EXIT":
                 exit_program(username)
@@ -231,8 +230,7 @@ def small_figure(username):
             figure_choice = input("Please type A or B or C").upper()
             if figure_choice == "A":
                 output_delay(figure_choice_a)
-                output_delay("Please try again")
-                welcome_message()
+                game_over(username)
                 break
             elif figure_choice == "B":
                 output_delay(figure_choice_b)
@@ -240,8 +238,7 @@ def small_figure(username):
                 break
             elif figure_choice == "C":
                 output_delay(figure_choice_c)
-                output_delay("Please try again")
-                welcome_message()
+                game_over(username)
                 break
             elif figure_choice == "EXIT":
                 exit_program(username)
@@ -289,13 +286,11 @@ def inside_station(username):
             inside_choice = input("Please type A or B or C\n").upper()
             if inside_choice == "A":
                 output_delay(inside_choice_a)
-                output_delay("Please try again\n")
-                welcome_message()
+                game_over(username)
                 break
             elif inside_choice == "B":
                 output_delay(inside_choice_b)
-                output_delay("Please try again\n")
-                welcome_message()
+                game_over(username)
                 break
             elif inside_choice == "C":
                 output_delay(inside_choice_c)
@@ -344,8 +339,7 @@ def journey_home(username):
                 break
             elif home_choice == "B":
                 output_delay(home_option_b)
-                output_delay("Please try again.\n")
-                welcome_message()
+                game_over(username)
                 break
             elif home_choice == "EXIT":
                 exit_program(username)
@@ -394,8 +388,7 @@ def abandoned_bus(username):
                 break
             elif bus_choice == "B":
                 output_delay(bus_choice_b)
-                output_delay("Please try again\n")
-                welcome_message()
+                game_over(username)
                 break
             elif bus_choice == "EXIT":
                 exit_program(username)
@@ -448,13 +441,11 @@ def open_door(username):
             door_choice = input("\nPlease type either A or B or C\n").upper()
             if door_choice == "A":
                 output_delay(door_option_a)
-                output_delay("Please try again.\n")
-                welcome_message()
+                game_over(username)
                 break
             elif door_choice == "B":
                 output_delay(door_option_b)
-                output_delay("Please try again.\n")
-                welcome_message()
+                game_over(username)
                 break
             elif door_choice == "C":
                 output_delay(door_option_c)
@@ -509,13 +500,11 @@ def escaped_classroom(username):
                 break
             elif escaped_choice == "B":
                 output_delay(escaped_choice_b)
-                output_delay("Please try again.\n")
-                welcome_message()
+                game_over(username)
                 break
             elif escaped_choice == "C":
                 output_delay(escaped_choice_c)
-                output_delay("Please try again.\n")
-                welcome_message()
+                game_over(username)
                 break
             elif escaped_choice == "EXIT":
                 exit_program(username)
@@ -568,8 +557,7 @@ def run_game(username):
             first_choice = input("Please type A or B or C\n").upper()
             if first_choice == "A":
                 output_delay(first_choice_a)
-                output_delay("Please try again\n")
-                welcome_message()
+                game_over(username)
                 break
             elif first_choice == "B":
                 output_delay(first_choice_b)
