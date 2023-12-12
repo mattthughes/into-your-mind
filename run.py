@@ -43,6 +43,12 @@ def load_game_over(game_over_msg):
         time.sleep(0.02)
 
 
+def load_game_title(title_msg):
+    for i in title_msg:
+        print(i, end="", flush=True)
+        time.sleep(0.04)
+
+
 def exit_program(username):
     print(f"Thank you for playing {username}")
     sys.exit()
@@ -89,6 +95,14 @@ def welcome_message():
     This function will greet the user and allow them to
     enter there first name
     """
+
+    title_intro = """
+
+    █ █▄░█ ▀█▀ █▀█   █▄█ █▀█ █░█ █▀█   █▀▄▀█ █ █▄░█ █▀▄
+    █ █░▀█ ░█░ █▄█   ░█░ █▄█ █▄█ █▀▄   █░▀░█ █ █░▀█ █▄▀
+    """
+    load_game_title(title_intro)
+
     text_msg = """
     Welcome to your nightmare, the journey to madness has begun
     but how crazy can it truly get?
