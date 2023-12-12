@@ -55,7 +55,7 @@ def exit_program(username):
     while thanking the user for playing
     """
     clear()
-    loading_elements("Exiting Game.....")
+    loading_elements("Exiting Game.....\n")
     output_delay(f"Thank you for playing {username}")
     sys.exit()
 

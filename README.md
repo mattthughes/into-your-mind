@@ -1,3 +1,5 @@
+[Into Your Mind title](docs/into-your-mind-title.png)
+
 # Into Your Mind
 
 Welcome to Into Your Mind this app was created with Python and deployed with Heroku. This game was designed to lead players through the madness option text based game called into your mind, this game will have different options allowing the player to decide where they would like to go next, but pick carefully as picking the wrong option can result in game over.
