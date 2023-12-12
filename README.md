@@ -56,6 +56,7 @@ This is how into your mind will work each decision the user makes will lead to a
 * Adjusted senario selection bugs where the user would enter an input and the wrong senario was being showcased in order to fix this I made some changes to the text message senario making sure the correct senarios were being shown.
 * Fixed a bug where figure choice c was being reassigned before being defined in the small figure function in order to fix this I removed one equals sign which fixed this issue.
 * Fixed exit bug by adding in the paramater username for all functions.
+* Fixed game over bugs by adjusting the speed of the load game over function to improve readability for the user.
 
 ## Credits 
 

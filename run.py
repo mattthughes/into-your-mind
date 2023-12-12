@@ -37,31 +37,41 @@ def loading_elements(loading):
         time.sleep(0.1)
 
 
+def load_game_over(game_over_msg):
+    for i in game_over_msg:
+        print(i, end="", flush=True)
+        time.sleep(0.02)
+
+
 def exit_program(username):
     print(f"Thank you for playing {username}")
     sys.exit()
 
 
 def game_over(username):
-    text_msg = """
-    
+    game_over_msg = """
+
 ██╗░░░██╗░█████╗░██╗░░░██╗  ██████╗░██╗███████╗██████╗░
 ╚██╗░██╔╝██╔══██╗██║░░░██║  ██╔══██╗██║██╔════╝██╔══██╗
 ░╚████╔╝░██║░░██║██║░░░██║  ██║░░██║██║█████╗░░██║░░██║
 ░░╚██╔╝░░██║░░██║██║░░░██║  ██║░░██║██║██╔══╝░░██║░░██║
 ░░░██║░░░╚█████╔╝╚██████╔╝  ██████╔╝██║███████╗██████╔╝
 ░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚═════╝░╚═╝╚══════╝╚═════╝░
-
-Please try again if you would like to restart the game type
-A. If you would like to return to the main menu type B or if
-you would like to exit the game type EXIT.
     """
+
+    text_msg = """
+    Please try again if you would like to restart the game type
+    A. If you would like to return to the main menu type B or if
+    you would like to exit the game type EXIT.
+    """
+
+    load_game_over(game_over_msg)
 
     output_delay(text_msg)
 
     while True:
         try:
-            game_over_choice = input("Please type A or B or EXIT").upper()
+            game_over_choice = input("Please type A or B or EXIT\n").upper()
             if game_over_choice == "A":
                 run_game(username)
             elif game_over_choice == "B":
@@ -69,9 +79,9 @@ you would like to exit the game type EXIT.
             elif game_over_choice == "EXIT":
                 exit_program(username)
             else:
-                output_delay("Please enter A or B or EXIT")
+                output_delay("Please enter A or B or EXIT\n")
         except ValueError as e:
-            output_delay("Please enter A or B or EXIT")
+            output_delay("Please enter A or B or EXIT\n")
 
 
 def welcome_message():
