@@ -50,7 +50,13 @@ def load_game_title(title_msg):
 
 
 def exit_program(username):
-    print(f"Thank you for playing {username}")
+    """
+    This function will exit the application
+    while thanking the user for playing
+    """
+    clear()
+    loading_elements("Exiting Game.....")
+    output_delay(f"Thank you for playing {username}")
     sys.exit()
 
 
@@ -95,6 +101,7 @@ def welcome_message():
     This function will greet the user and allow them to
     enter there first name
     """
+    clear()
 
     title_intro = """
 
@@ -120,6 +127,7 @@ def welcome_message():
 
 
 def end(username):
+    clear()
     text_msg = f"""
     Congratulations you have beaten the game,
     I guess its not what you expected have you
