@@ -1,4 +1,4 @@
-[Into Your Mind title](docs/into-your-mind-title.png)
+![Into Your Mind title](docs/into-your-mind-title.png)
 
 # Into Your Mind
 
