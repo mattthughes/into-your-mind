@@ -61,6 +61,7 @@ def exit_program(username):
 
 
 def game_over(username):
+    clear()
     game_over_msg = """
 
     ██╗░░░██╗░█████╗░██╗░░░██╗  ██████╗░██╗███████╗██████╗░
