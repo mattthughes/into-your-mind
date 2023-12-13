@@ -183,7 +183,7 @@ scenarios = {
          decision you thought you made was all part
          of your imagination.
          """,
-         "final_choice_b": """
+        "final_choice_b": """
          You chose to go home as you enter your house
          your parents are just sitting there, as you
          try and talk to them they just ignore you,
