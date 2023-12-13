@@ -111,6 +111,32 @@ scenarios = {
         forever.
         """
 
+    },
+    "inside_station": {
+        "message": """
+        You are in the police station waiting for your parents
+        as you wait for your parents, you hear a loud scream.
+        Do you A hide in the station or B wait for your parents or
+        C go and see what the scream was.
+        """,
+        "inside_choice_a": """
+        You hid away from the screaming creature but the police
+        officer grabs you from underneath the chair, without
+        hesitation the police officer fires his gun at you,
+        he kills you, proving you cannot trust anyone in this
+        world.
+        """,
+        "inside_choice_b": """
+        You waited for your parents and the large creature has
+        broken free, the creature grabs you as they escape taking
+        you with them,killing you in the process.
+        """,
+        "inside_choice_c": """
+        You are brave and go to see what the scream was, and its
+        a very small figure, you cannot believe your eyes it's
+        you.....
+        """
+
     }
 
 

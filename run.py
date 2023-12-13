@@ -276,35 +276,16 @@ def small_figure(username):
 
 def inside_station(username):
     clear()
-    text_msg = """
-    You are in the police station waiting for your parents
-    as you wait for your parents, you hear a loud scream.
-    Do you A hide in the station or B wait for your parents or
-    C go and see what the scream was.
-    """
-
+    text_msg = scenarios.get("inside_station")["message"]
+    
     output_delay(text_msg)
 
-    inside_choice_a = """
-    You hid away from the screaming creature but the police
-    officer grabs you from underneath the chair, without
-    hesitation the police officer fires his gun at you,
-    he kills you, proving you cannot trust anyone in this
-    world.
-    """
-
-    inside_choice_b = """
-    You waited for your parents and the large creature has
-    broken free, the creature grabs you as they escape taking
-    you with them,killing you in the process.
-    """
-
-    inside_choice_c = """
-    You are brave and go to see what the scream was, and its
-    a very small figure, you cannot believe your eyes it's
-    you.....
-    """
-
+    inside_choice_a = scenarios.get("inside_station")["inside_choice_a"]
+    
+    inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
+    
+    inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
+    
     while True:
         try:
             inside_choice = input("Please type A or B or C\n").upper()
