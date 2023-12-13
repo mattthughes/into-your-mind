@@ -161,38 +161,11 @@ def end(username):
 
 def final_battle(username):
     clear()
-    text_msg = """
-    The imposter has escaped and you are free to
-    either A fight this imposter  or B go home.
-    """
+    text_msg = scenarios.get("final_battle")["message"]
 
-    final_choice_a = """
-    You confront yourself and fight with everything you
-    have. As you are about to defeat this evil version
-    of you wake up, all the students around you look
-    mortified. As they notice the tears running down
-    your face the principal walks in and asks if you
-    are okay. As you look down at your notepad that
-    'real' battle you were supposdly in has ended
-    and was all just a dream. You begin to turn
-    the pages extremley quickly, you notice every
-    decision you thought you made was all part
-    of your imagination.
-    """
+    final_choice_a = scenarios.get("final_battle")["final_choice_a"]
 
-    final_choice_b = """
-    You chose to go home as you enter your house
-    your parents are just sitting there, as you
-    try and talk to them they just ignore you,
-    pretending you do not exist. You try to go
-    to sleep but cannot sleep. All the fears you
-    have ever had come to life before you. As
-    you try to escape you are smothered by the
-    monsters. As you are slowly fading you notice
-    in the distance the imposter sniggering at you
-    as they repeat HAHAHAHA YOU ARE TRAPPED FOREVER!
-    You have been trapped in the underworld forever.
-    """
+    final_choice_b = scenarios.get("final_battle")["final_choice_b"]
 
     output_delay(text_msg)
 
