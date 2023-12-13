@@ -114,3 +114,26 @@ Game Over choice(characters other than A or B or EXIT)|Scenario to load when sta
 Game over choice (A)|Game to launch|Typed A|Game started with first scenario|Pass
 Game over choice(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
 Game Over choice(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
+
+`Abandoned bus`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Abandoned bus|Scenario to load when correct option picked|Answered correctly|Abandoned bus shown|Pass
+Abandoned bus(none)|Invalid format (username) please type either A or B to load|Entered nothing|Invalid format (username) please type either A or B shown|Pass
+Abandoned bus(negative numbers)|Invalid format (username) please type either A or B to load|Entered Negative numbers|Invalid format (username) please type either A or B shown|Pass
+Abandoned bus(numbers)|Invalid format (username) please type either A or B to load|Entered Numbers|Invalid format (username) please type either A or B shown|Pass
+Abandoned bus(special characters)|Invalid format (username) please type either A or B to load|Entered Special characters|Invalid format (username) please type either A or B shown|Pass
+Abandoned bus(characters other than A or B)|Invalid format (username) please type either A or B to load|Entered other characters|Invalid format (username) please type either A or B shown|Pass
+Abandoned bus (A)|Correct option message loaded leading to journey home scenario|Entered A|Correct option message loaded leading to journey home scenario shown|Pass
+Abandoned bus(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
+You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
+Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
+Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
+Game Over choice (numbers)|Please enter A or B or Exit to appear|Entered Numbers|Please enter A or B or Exit shown|Pass
+Game Over choice(negative numbers)|Please enter A or B or Exit to appear|Entered negative numbers|Please enter A or B or Exit shown|Pass
+Game Over choice (special characters)|Please enter A or B or Exit to appear|Entered Special characters|Please enter A or B or Exit shown|Pass
+Game Over choice(characters other than A or B or EXIT)|Scenario to load when start game is launched|Entered other characters|Please enter A or B or Exit shown|Pass
+Game over choice (A)|Game to launch|Typed A|Game started with first scenario|Pass
+Game over choice(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
+Game Over choice(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
