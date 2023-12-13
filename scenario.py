@@ -137,6 +137,34 @@ scenarios = {
         you.....
         """
 
+    },
+    "small_figure": {
+        "message": """
+        You cannot believe what you are seeing, this can't be right
+        Do you A go and confront this small figure. B fight this figure
+        or C do you run away. How brave are you?
+        """,
+        "figure_choice_a": """
+        You confront the small figure, and he laughs at you, begins to
+        explain that he is the leader of this underworld and once he has
+        dealt with you. He will be free to plague all of humanity escaping
+        the underworld, you are unprepared for this and the imposter
+        kills you escaping the underworld.
+        """,
+        "figure_choice_b": """
+        You choose to fight the imposter catching them off guard
+        it's a hellacious battle but you survive for now.
+        """,
+        "figure_choice_c": """
+        You chose to run away the imposter smiles to themselves
+        and begins to chase you. As you escape the police station
+        you are hit by a car, as you lay there slowly dying, before
+        you pass you hear a faint laugh in the distance, you can't
+        believe what you are seeing it's the principal from the school
+        cackling as they drive past your lifeless corpse.
+        """
+
+
     }
 
 

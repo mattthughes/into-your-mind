@@ -219,33 +219,13 @@ def final_battle(username):
 
 def small_figure(username):
     clear()
-    text_msg = f"""
-    You cannot believe what you are seeing, this can't be right
-    Do you A go and confront this small figure. B fight this figure
-    or C do you run away. How brave are you {username}?
-    """
+    text_msg = scenarios.get("small_figure")[f"message"]
 
-    figure_choice_a = """
-    You confront the small figure, and he laughs at you, begins to
-    explain that he is the leader of this underworld and once he has
-    dealt with you. He will be free to plague all of humanity escaping
-    the underworld, you are unprepared for this and the imposter
-    kills you escaping the underworld.
-    """
+    figure_choice_a = scenarios.get("small_figure")["figure_choice_a"]
 
-    figure_choice_b = """
-    You choose to fight the imposter catching them off guard
-    it's a hellacious battle but you survive for now.
-    """
+    figure_choice_b = scenarios.get("small_figure")["figure_choice_b"]
 
-    figure_choice_c = """
-    You chose to run away the imposter smiles to themselves
-    and begins to chase you. As you escape the police station
-    you are hit by a car, as you lay there slowly dying, before
-    you pass you hear a faint laugh in the distance, you can't
-    believe what you are seeing it's the principal from the school
-    cackling as they drive past your lifeless corpse.
-    """
+    figure_choice_c = scenarios.get("small_figure")["figure_choice_c"]
 
     output_delay(text_msg)
 
@@ -277,15 +257,14 @@ def small_figure(username):
 def inside_station(username):
     clear()
     text_msg = scenarios.get("inside_station")["message"]
-    
-    output_delay(text_msg)
 
+    output_delay(text_msg)
     inside_choice_a = scenarios.get("inside_station")["inside_choice_a"]
-    
+
     inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
-    
+
     inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
-    
+
     while True:
         try:
             inside_choice = input("Please type A or B or C\n").upper()
@@ -318,13 +297,11 @@ def journey_home(username):
     """
     clear()
     text_msg = scenarios.get("journey_home")["message"]
-    
+
     output_delay(text_msg)
-
     home_option_a = scenarios.get("journey_home")["home_option_a"]
-
     home_option_b = scenarios.get("journey_home")["home_option_b"]
-    
+
     while True:
         try:
             home_choice = input("\nPlease type either A or B\n").upper()
@@ -353,11 +330,8 @@ def abandoned_bus(username):
     clear()
 
     text_msg = scenarios.get("abandoned_bus")["message"]
-
     output_delay(text_msg)
-
     bus_choice_a = scenarios.get("abandoned_bus")["bus_choice_a"]
-
     bus_choice_b = scenarios.get("abandoned_bus")["bus_choice_b"]
 
     while True:
@@ -388,13 +362,9 @@ def open_door(username):
     clear()
 
     text_msg = scenarios.get("open_door")["message"]
-
     door_option_a = scenarios.get("open_door")["door_option_a"]
-
     door_option_b = scenarios.get("open_door")["door_option_b"]
-
     door_option_c = scenarios.get("open_door")["door_option_c"]
-
     output_delay(text_msg)
 
     while True:
@@ -428,15 +398,10 @@ def escaped_classroom(username):
     to pick one out of three options
     """
     clear()
-
     text_msg = scenarios.get("escaped_classroom")["message"]
-
     escaped_choice_a = scenarios.get("escaped_classroom")["escaped_choice_a"]
-
     escaped_choice_b = scenarios.get("escaped_classroom")["escaped_choice_b"]
-
     escaped_choice_c = scenarios.get("escaped_classroom")["escaped_choice_c"]
-
     output_delay(text_msg)
 
     while True:
@@ -471,13 +436,9 @@ def run_game(username):
     """
     clear()
     loading_elements("Starting game....\n")
-
     first_choice_a = scenarios.get("classroom_scenario")["first_choice_a"]
-
     first_choice_b = scenarios.get("classroom_scenario")["first_choice_b"]
-
     first_choice_c = scenarios.get("classroom_scenario")["first_choice_c"]
-
     text_msg = scenarios.get("classroom_scenario")["message"]
     output_delay(text_msg)
 
@@ -514,7 +475,6 @@ def view_instructions(username):
     """
     clear()
     loading_elements("\nInstructions loading....\n")
-
     text_msg = """
     Into Your Mind is a text based action adventure game
     where your decisions really matter. During the game
