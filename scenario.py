@@ -72,6 +72,28 @@ scenarios = {
         for now.
         """
 
+    },
+    "abandoned_bus": {
+        "message": """
+        You find an open school bus leading you out of the school.
+        Do you A go through the school bus and head out the open
+        door or B hide under the bus seats?
+        """,
+        "bus_choice_a": """
+        You go through the open bus and spot an exit,
+        you quickly make a dash for the exit and
+        escape the school. Now to find the way
+        home and fast.
+        """,
+        "bus_choice_b": """
+        You went through the open bus and hid under
+        the seats, suddenly all the chewing gum under
+        the seats has grown to the size of the school
+        bus. Before you can react the chewing gum
+        monster smothers you, takes your souls,
+        banishing you to the underworld forever.
+        """
+
     }
 
 

@@ -381,27 +381,13 @@ def abandoned_bus(username):
     """
     clear()
 
-    text_msg = """
-    You find an open school bus leading you out of the school.
-    Do you A go through the school bus and head out the open
-    door or B hide under the bus seats?
-    """
+    text_msg = scenarios.get("abandoned_bus")["message"]
+
     output_delay(text_msg)
 
-    bus_choice_a = """
-    You go through the open bus and spot an exit,
-    you quickly make a dash for the exit and
-    escape the school. Now to find the way
-    home and fast.
-    """
-    bus_choice_b = """
-    You went through the open bus and hid under
-    the seats, suddenly all the chewing gum under
-    the seats has grown to the size of the school
-    bus. Before you can react the chewing gum
-    monster smothers you, takes your souls,
-    banishing you to the underworld forever.
-    """
+    bus_choice_a = scenarios.get("abandoned_bus")["bus_choice_a"]
+
+    bus_choice_b = scenarios.get("abandoned_bus")["bus_choice_b"]
 
     while True:
         try:
@@ -437,7 +423,7 @@ def open_door(username):
     door_option_b = scenarios.get("open_door")["door_option_b"]
 
     door_option_c = scenarios.get("open_door")["door_option_c"]
-    
+
     output_delay(text_msg)
 
     while True:
@@ -475,11 +461,11 @@ def escaped_classroom(username):
     text_msg = scenarios.get("escaped_classroom")["message"]
 
     escaped_choice_a = scenarios.get("escaped_classroom")["escaped_choice_a"]
-    
+
     escaped_choice_b = scenarios.get("escaped_classroom")["escaped_choice_b"]
 
     escaped_choice_c = scenarios.get("escaped_classroom")["escaped_choice_c"]
-    
+
     output_delay(text_msg)
 
     while True:
