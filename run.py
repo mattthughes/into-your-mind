@@ -492,27 +492,14 @@ def escaped_classroom(username):
     """
     clear()
 
-    text_msg = """
-    As you escape the classroom you notice a small dog in the corridor.
-    Do you A throw your book at the dog. B turn around or C pet the dog.
-    """
+    text_msg = scenarios.get("escaped_classroom")["message"]
 
-    escaped_choice_a = """
-    You throw a science book at the dog causing an explosion
-    killing the dog, well done you live to fight another day.
-    """
+    escaped_choice_a = scenarios.get("escaped_classroom")["escaped_choice_a"]
+    
+    escaped_choice_b = scenarios.get("escaped_classroom")["escaped_choice_b"]
 
-    escaped_choice_b = """
-    You turn around and you spot an even bigger dog, before you can react
-    the dog bites you try to escape but you feel yourself slowing losing
-    control, you faint and as you lay there you can feel yourself
-    getting weaker. As you slowly lose your soul to the underworld.
-    """
-
-    escaped_choice_c = """
-    You pet the dog and the dog turns around and bites you,
-    you have been lost to the underworld forever.
-    """
+    escaped_choice_c = scenarios.get("escaped_classroom")["escaped_choice_c"]
+    
     output_delay(text_msg)
 
     while True:
