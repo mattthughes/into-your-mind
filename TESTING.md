@@ -13,6 +13,7 @@
 * Fixed a bug where figure choice c was being reassigned before being defined in the small figure function in order to fix this I removed one equals sign which fixed this issue.
 * Fixed exit bug by adding in the paramater username for all functions.
 * Fixed game over bugs by adjusting the speed of the load game over function to improve readability for the user.
+* Fixed a bug where the user could input numbers or special characters into the name field. To fix this I used the or not operator and the isalpha method to make sure the input being entered is a string and not a float, int or any special characters which fixed this issue.
 
 ### Manual Testing 
 

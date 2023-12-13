@@ -120,8 +120,8 @@ def welcome_message():
     while True:
         username = input("What is your name?\n")
 
-        if not username:
-            print("Please enter your name.\n")
+        if not username or not username.isalpha():
+            print("Please enter your name with alphabet letters.\n")
         else:
             intro(username)
             break
