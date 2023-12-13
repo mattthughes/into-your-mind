@@ -42,3 +42,27 @@ Instructions(Special Characters)|Please enter either A or B loaded|Entered Speci
 Instructions(A)|Game to start with first senario|Typed A|Game started with first scenario|Pass
 Instructions(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
 Instructions(Exit)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
+
+`First Scenario`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+First Scenario|Scenario to load when start game is launched|Launched game|First Scenario shown|Pass
+First choice(none)|Please enter the correct format either A or B or C to load|Entered nothing|Please enter the correct format either A or B or C shown|Pass
+First choice(negative numbers)|Please enter the correct format either A or B or C to load|Entered Negative numbers|Please enter the correct format either A or B or C shown|Pass
+First choice(numbers)|Please enter the correct format either A or B or C to load|Entered Numbers|Please enter the correct format either A or B or C shown|Pass
+First choice(special characters)|Please enter the correct format either A or B or C to load|Entered Special characters|Please enter the correct format either A or B or C shown|Pass
+First choice(characters other than A or B or C)|Please enter the correct format either A or B or C to load|Entered other characters|Please enter the correct format either A or B or C shown|Pass
+First Choice (A)|Wrong option message loaded leading to game over screen|Entered A|Wrong option message loaded leading to game over screen shown|Pass
+First Choice(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
+First Choice (C)|Correct option message loaded leading to escaped classroom scenario|Entered C|Correct option message loaded leading to escaped classroom scenario shown|Pass
+You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
+Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
+Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
+Game Over choice (numbers)|Please enter A or B or Exit to appear|Entered Numbers|Please enter A or B or Exit shown|Pass
+Game Over choice(negative numbers)|Please enter A or B or Exit to appear|Entered negative numbers|Please enter A or B or Exit shown|Pass
+Game Over choice (special characters)|Please enter A or B or Exit to appear|Entered Special characters|Please enter A or B or Exit shown|Pass
+Game Over choice(characters other than A or B or EXIT)|Scenario to load when start game is launched|Entered other characters|Please enter A or B or Exit shown|Pass
+Game over choice (A)|Game to launch|Typed A|Game started with first scenario|Pass
+Game over choice(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
+Game Over choice(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
