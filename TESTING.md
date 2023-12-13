@@ -25,11 +25,20 @@
 :-----:|:-----:|:-----:|:-----:|:-----:
 Intro Message|Intro message to show when program runs|Run Program|Intro message shown|Pass
 Intro Message (input = none)|Please enter your name to appear|Pressed enter|Please enter your name shown|Pass
+Intro Message (numbers)|Please enter your name with alphabet letters|Entered Numbers|Please enter your name with alphabet letters shown|Pass
+Intro Message (Negative numbers)|Please enter your name with alphabet letters|Entered Negative numbers|Please enter your name with alphabet letters shown|Pass
+Intro Message (Special characters)|Please enter your name with alphabet letters|Entered Special characters|Please enter your name with alphabet letters shown|Pass
 Intro Message (completed)|Welcome message to appear|Entered name|Welcome Message appeared|Pass
-Welcome message (none)|Please enter a valid format message|Pressed enter|Please enter a valid format|Pass
+Welcome message (none)|Please enter a valid format please type either a or b|Pressed enter|Please enter a valid format please type either a or b shown|Pass
+Welcome message (numbers)|Please enter a valid format please type either a or b|Entered Numbers|Please enter a valid format please type either a or b shown|Pass
+Welcome message (negative numbers)|Please enter a valid format please type either a or b|Entered Negative numbers|Please enter a valid format please type either a or b shown|Pass
+Welcome message (special characters)|Please enter a valid format please type either a or b|Entered Special characters|Please enter a valid format please type either a or b shown|Pass
 Welcome Message (A)|Game to start with first senario|Typed A|Game started with first senario|Pass
 Welcome Message (B)|Instructions to load informing user how to play|Typed B|Instructions loaded|Pass
 Instructions(none)|Please enter either A or B loaded|Entered nothing|Please enter either A or B loaded|Pass
-Instructions(A)|Game to start with first senario|Typed A|Game started with first senario|Pass
+Instructions(Negative Numbers)|Please enter either A or B loaded|Entered negative numbers|Please enter either A or B loaded|Pass
+Instructions (Numbers)|Please enter either A or B loaded|Entered  numbers|Please enter either A or B loaded|Pass
+Instructions(Special Characters)|Please enter either A or B loaded|Entered Special characters|Please enter either A or B loaded|Pass
+Instructions(A)|Game to start with first senario|Typed A|Game started with first scenario|Pass
 Instructions(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
 Instructions(Exit)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
