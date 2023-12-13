@@ -44,6 +44,34 @@ scenarios = {
         you have been lost to the underworld forever.
         """
 
+    },
+    "open_door": {
+        "message": """
+        As you explore the abandoned school you notice an open door
+        and an open window.
+        Do you A go through the door. B slam the door shut or C go
+        through the open window and escape.
+        """,
+        "door_option_a": """
+        You went through the open door, were attacked
+        and then eaten by an alien one of your
+        biggest fears you die.
+        """,
+        "door_option_b": """
+        You slammed the door shut and alerted the principal, he
+        finds you and takes you to his office. The principal
+        begins to laugh at you get up and try and escape
+        but the door is locked the principal begins to laugh
+        even more and starts to repeat you are
+        here forever HAHAHAHAHAHA!.
+        """,
+        "door_option_c": """
+        You went through the open window leading you
+        to the outside playground, escaping the
+        monster through the open door. You escaped
+        for now.
+        """
+
     }
 
 

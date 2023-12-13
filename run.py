@@ -430,34 +430,14 @@ def open_door(username):
     """
     clear()
 
-    text_msg = """
-    As you explore the abandoned school you notice an open door
-    and an open window.
-    Do you A go through the door. B slam the door shut or C go
-    through the open window and escape.
-    """
-    door_option_a = """
-    You went through the open door, were attacked
-    and then eaten by an alien one of your
-    biggest fears you die.
-    """
+    text_msg = scenarios.get("open_door")["message"]
 
-    door_option_b = f"""
-    You slammed the door shut and alerted the principal, he
-    finds you and takes you to his office. The principal
-    begins to laugh at you get up and try and escape
-    but the door is locked the principal begins to laugh
-    even more and starts to repeat you are
-    here forever {username} HAHAHAHAHAHA!.
-    """
+    door_option_a = scenarios.get("open_door")["door_option_a"]
 
-    door_option_c = f"""
-    You went through the open window leading you
-    to the outside playground, escaping the
-    monster through the open door. You escaped
-    for now {username}
-    """
+    door_option_b = scenarios.get("open_door")["door_option_b"]
 
+    door_option_c = scenarios.get("open_door")["door_option_c"]
+    
     output_delay(text_msg)
 
     while True:
