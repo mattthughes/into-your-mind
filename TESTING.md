@@ -56,6 +56,7 @@ First choice(characters other than A or B or C)|Please enter the correct format 
 First Choice (A)|Wrong option message loaded leading to game over screen|Entered A|Wrong option message loaded leading to game over screen shown|Pass
 First Choice(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
 First Choice (C)|Correct option message loaded leading to escaped classroom scenario|Entered C|Correct option message loaded leading to escaped classroom scenario shown|Pass
+First Choice (EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
 You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
 Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
 Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
@@ -80,6 +81,7 @@ Escaped classroom(characters other than A or B or C)|Please type either A or B o
 Escaped classroom (A)|Correct option message loaded leading to open door scenario|Entered A|Correct option message loaded leading to open door scenario shown|Pass
 Escaped classroom (B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
 Escaped classroom (C)|Wrong option message loaded leading to game over screen|Entered C|Correct option message loaded leading to escaped classroom scenario shown|Pass
+Escaped classroom (EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
 You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
 Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
 Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
@@ -104,6 +106,7 @@ Open door(characters other than A or B or C)|Please type either A or B or C to l
 Open door (A)|Wrong option message loaded leading to game over screen|Entered A|Wrong option message loaded leading to game over screen shown|Pass
 Open door (B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
 Open door (C)|Correct option message loaded leading to abandoned bus scenario|Entered C|Correct option message loaded leading to abandoned bus scenario shown|Pass
+Open door (EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
 You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
 Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
 Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
@@ -127,6 +130,7 @@ Abandoned bus(special characters)|Invalid format (username) please type either A
 Abandoned bus(characters other than A or B)|Invalid format (username) please type either A or B to load|Entered other characters|Invalid format (username) please type either A or B shown|Pass
 Abandoned bus (A)|Correct option message loaded leading to journey home scenario|Entered A|Correct option message loaded leading to journey home scenario shown|Pass
 Abandoned bus(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
+Abandoned bus(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
 You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
 Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
 Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
