@@ -94,6 +94,23 @@ scenarios = {
         banishing you to the underworld forever.
         """
 
+    },
+    "journey_home": {
+        "message": """
+        As you are walking home you hear a police siren in the background.
+        Do you A wait for the police or do you B keep walking.
+        """,
+        "home_option_a": """
+        You waited for the police and they take you
+        to the police station you are safe for now.
+        """,
+        "home_option_b": """
+        You kept walking home as you continue walking a
+        large figure appears they open a blackhole.
+        Which sucks in leaving you stuck in the void
+        forever.
+        """
+
     }
 
 

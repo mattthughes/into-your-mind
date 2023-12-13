@@ -336,24 +336,14 @@ def journey_home(username):
     two options to pick from
     """
     clear()
-    text_msg = """
-    As you are walking home you hear a police siren in the background.
-    Do you A wait for the police or do you B keep walking.
-    """
+    text_msg = scenarios.get("journey_home")["message"]
+    
     output_delay(text_msg)
 
-    home_option_a = f"""
-    You waited for the police and they take you
-    to the police station you are safe for now
-    {username}"""
+    home_option_a = scenarios.get("journey_home")["home_option_a"]
 
-    home_option_b = """
-    You kept walking home as you continue walking a
-    large figure appears they open a blackhole.
-    Which sucks in leaving you stuck in the void
-    forever
-    """
-
+    home_option_b = scenarios.get("journey_home")["home_option_b"]
+    
     while True:
         try:
             home_choice = input("\nPlease type either A or B\n").upper()
