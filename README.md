@@ -88,10 +88,13 @@ This is how into your mind will work each decision the user makes will lead to a
 
 * This element will be shown if the user does not enter either A or B or C or even exit depending on the different scenario. If the user was to enter a number this error message would be shown. If A or B or C or exit have not been entered this same error message will appear. This will give the user clear visual feedback in what they need to do, removing any unneccesary frustration the user may have had, if this was not outlined clearly.
 
+![Wrong Format scenarios](docs/wrong-format-scenario.png)
 
 ### Congratulations screen
 
 * This element will be shown if the user has answered every scenario correctly. This screen will inform the user of there success providing further key story information, they would have not recieved unless they had completed the game. Upon completetion the user will be asked to type either A to play again or to type EXIT to exit the applicaton altogether.
+
+![Congratulations screen](docs/winning-screen.png)
 
 ## Languages 
 
