@@ -43,19 +43,29 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
 
 ### Client Goals
 
-* I would like to view the instructions to understand how to play the game.
-* I would like to be able to enter my own name to create my own character.
-* I would like to be able to make clear decisions that have an impact on the game.
-* I would like my decisions to have importance with clear descriptions on what happens next.
-* I would like to restart or exit the game at any point if I was to make a wrong decision.
-* I Would like to return to the main menu at any time to view any further instructions I may have missed.
-* I like story driven text based adventures which have a clear explanation on the world and its surroundings.
+* Build a text based adventure game with user input.
+* Make sure users are able to leave the application at any point
+* The text based adventure game should be orginal and should be completable.
 
 ### User Goals
 
+* I would like to view the instructions to understand how to play the game.
+* I would like to be able to enter my own name to create my own character.
+* I would like to be able to make clear decisions that have an impact on the game.
+* I like story driven text based adventures which have a clear explanation on the world and its surroundings.
+
 ### Frequent user goals
 
+* I would like my decisions to have importance with clear descriptions on what happens next.
+* I would like to restart or exit the game at any point if I was to make a wrong decision.
+* I Would like to return to the main menu at any time to view any further instructions I may have missed.
+
+
 ### Future Implementations
+
+* In the future I will look at add a timer to increase the tension during gameplay.
+* I would like to add a scoreboard so users are able to compete against friends and family
+* I would like to add further scenarios to make the game even more challenging.
 
 ## Design
 
