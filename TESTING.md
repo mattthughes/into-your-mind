@@ -1,4 +1,23 @@
-## Testing 
+# Into Your Mind Testing
+
+Welcome to the testing results of the text based action adventure game known as Into Your Mind in this document you will find all the testing results, such as solved bugs and how they were fixed, also the manual testing and how each element was tested making sure each element was working as intended.
+
+## CONTENTS
+
+-[Into Your Mind Testing](#into-your-mind-testing)
+    -[Contents](#contents)
+    -[Testing Content](#testing-content)
+        -[Python Validation](#python-validation)
+        -[Solved Bugs](#solved-bugs)
+        -[Known Bugs](#known-bugs)
+        -[Manual Testing](#manual-testing)
+            -[Aims](#aims)
+            -[Testing Steps](#testing-steps)
+        -[Testing Results](#testing-results)
+
+## Testing Content
+
+## Python Validation
 
 ### Solved Bugs
 
@@ -17,7 +36,15 @@
 * Fixed scenario bugs when trying to import the dictionary, an error appeared stating that none is not an object. In order to access the nested dictionary I first used the get method to get the dictionary scenarios. Then used the brackets to get the nested object scenario one and then square brackets to get the child. Which fixed these bugs, allowed me to access the nested dictionary.
 * Fixed win message but, the text imported was much bigger than the terminal, to fix this I changed the image to fit the terminal which fixed this issue.
 
-### Manual Testing 
+### Known bugs
+
+### Manual Testing
+
+#### Aims
+
+#### Testing Steps
+
+### Testing Results
 
 `Intro screen` 
 

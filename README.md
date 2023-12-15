@@ -6,9 +6,42 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
 
 ## CONTENTS
 
+-[Into Your Mind](#into-your-mind)
+    -[CONTENTS](#contents)
+    -[Project Goals](#project-goals)
+        -[Client Goals](#client-goals)
+        -[User Goals](#user-goals)
+        -[Frequent User Goals](#frequent-user-goals)
+        -[Future Implementations](#future-implementations)
+    -[Design](#design)
+        -[Flow Chart](#flow-chart)
+    -[Key Features](#key-features)
+        -[Welcome Message](#welcome-message)
+        -[Wrong Format Welcome Message](#wrong-format-welcome-message)
+        -[Intro Message](#intro-message)
+        -[Instructions](#instructions)
+        -[Different Scenarios](#different-scenarios)
+        -[Correct Answers](#correct-answers)
+        -[Wrong Answers](#wrong-answers)
+        -[Game Over Screen](#game-over-screen)
+        -[Exit Screen](#exit-screen)
+        -[Wrong Format](#wrong-format)
+        -[Congratulations screen](#congratulations-screen)
+    -[Languages](#languages)
+    -[Frameworks and tools](#frameworks--tools)
+    -[Deployment](#deployment)
+        -[How to deploy](#how-to-deploy)
+        -[How to fork](#how-to-fork)
+        -[How to deploy on heroku](#how-to-clone)
+    -[Credits]
+        -[Media](#media)
+        -[Code](#code)
+        -[Content](#content)
+        -[Acknowledgements](#acknowledgements)
+
 ## Project Goals
 
-### User Stories 
+### Client Goals
 
 * I would like to view the instructions to understand how to play the game.
 * I would like to be able to enter my own name to create my own character.
@@ -16,9 +49,17 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
 * I would like my decisions to have importance with clear descriptions on what happens next.
 * I would like to restart or exit the game at any point if I was to make a wrong decision.
 * I Would like to return to the main menu at any time to view any further instructions I may have missed.
-* I like story driven text based adventures which have a clear explanation on the world and its surroundings. 
+* I like story driven text based adventures which have a clear explanation on the world and its surroundings.
 
-## Flow Chart 
+### User Goals
+
+### Frequent user goals
+
+### Future Implementations
+
+## Design
+
+### Flow Chart 
 
 This is how into your mind will work each decision the user makes will lead to a specific senario whether that is viewing the instructions or just progressing in the game each decision the user makes has an outcome. This flow chart has allowed me to outline the logic I am looking to follow which means during production there will be no logic gaps and everything will work as I intended.
 
@@ -117,7 +158,7 @@ This is how into your mind will work each decision the user makes will lead to a
 
 ### How to fork
 
-### How to clone
+### How to deploy on heroku
 
 ## Credits 
 
