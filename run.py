@@ -156,13 +156,13 @@ def end(username):
     escaped or did he let you escape, or was it all
     just a bad dream I guess that is up to you {username}
     to decide. If you would like to play the game again
-    type A or if you would like to exit type EXIT
+    type A or if you would like to exit type EXIT\n
     """
     output_delay(text_msg)
 
     while True:
         try:
-            end_choice = input("Please type either A or EXIT\n").upper()
+            end_choice = input("\nPlease type either A or EXIT\n").upper()
             if end_choice == "A":
                 run_game(username)
                 break
@@ -188,7 +188,7 @@ def final_battle(username):
 
     while True:
         try:
-            final_choice = input("Please type either A or B\n").upper()
+            final_choice = input("\nPlease type either A or B\n").upper()
             if final_choice == "A":
                 output_delay(final_choice_a)
                 end(username)
@@ -221,7 +221,7 @@ def small_figure(username):
 
     while True:
         try:
-            figure_choice = input("Please type A or B or C").upper()
+            figure_choice = input("\nPlease type A or B or C\n").upper()
             if figure_choice == "A":
                 output_delay(figure_choice_a)
                 game_over(username)
@@ -257,7 +257,7 @@ def inside_station(username):
 
     while True:
         try:
-            inside_choice = input("Please type A or B or C\n").upper()
+            inside_choice = input("\nPlease type A or B or C\n").upper()
             if inside_choice == "A":
                 output_delay(inside_choice_a)
                 game_over(username)
@@ -434,7 +434,7 @@ def run_game(username):
 
     while True:
         try:
-            first_choice = input("Please type A or B or C\n").upper()
+            first_choice = input("\nPlease type A or B or C\n").upper()
             if first_choice == "A":
                 output_delay(first_choice_a)
                 game_over(username)

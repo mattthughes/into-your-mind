@@ -160,6 +160,31 @@ Game over choice|Please try again message to appear after you died text|Waited f
 Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
 Game Over choice (numbers)|Please enter A or B or Exit to appear|Entered Numbers|Please enter A or B or Exit shown|Pass
 Game Over choice(negative numbers)|Please enter A or B or Exit to appear|Entered negative numbers|Please enter A or B or Exit shown|Pass
+Game Over choice (special characters)|Please enter A or B or Exit to appear|Entered Special characters|Please enter A or B or Exit shown|Passan A or B or EXIT)|Scenario to load when start game is launched|Entered other characters|Please enter A or B or Exi
+Game Over choice(characters other tht shown|Pass
+Game over choice (A)|Game to launch|Typed A|Game started with first scenario|Pass
+Game over choice(B)|Main menu to load|Typed B|Main Menu Loaded|Pass
+Game Over choice(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
+
+`Inside station`
+
+**Element**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Inside station|Scenario to load when correct option picked|Answered correctly|Inside station shown|Pass
+Inside station(none)| Please type either A or B or C to load|Entered nothing|Please type either A or B or C shown|Pass
+Inside station(negative numbers)| Please type either A or B or C to load|Entered Negative numbers|Please type either A or B or C shown|Pass
+Inside station(numbers)| Please type either A or B or C to load|Entered Numbers|Please type either A or B or C shown|Pass
+Inside station(special characters)| Please type either A or B or C to load|Entered Special characters|Please type either A or B or C shown|Pass
+Journey home(characters other than A or B or C)| Please type either A or B or C to load|Entered other characters|Please type either A or B or C shown|Pass
+Journey home (A)|Wrong option message loaded leading to game over screen|Entered A|Wrong option message loaded leading to game over screen shown|Pass
+Journey home(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
+Journey home (C)|Correct option message loaded leading to small figure scenario|Entered C|Correct option message loaded leading to small figure scenario| 
+Journey home(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
+You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
+Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
+Game over choice(none)|Please enter A or B or Exit to appear|Entered nothing|Please enter A or B or Exit shown|Pass
+Game Over choice (numbers)|Please enter A or B or Exit to appear|Entered Numbers|Please enter A or B or Exit shown|Pass
+Game Over choice(negative numbers)|Please enter A or B or Exit to appear|Entered negative numbers|Please enter A or B or Exit shown|Pass
 Game Over choice (special characters)|Please enter A or B or Exit to appear|Entered Special characters|Please enter A or B or Exit shown|Pass
 Game Over choice(characters other than A or B or EXIT)|Scenario to load when start game is launched|Entered other characters|Please enter A or B or Exit shown|Pass
 Game over choice (A)|Game to launch|Typed A|Game started with first scenario|Pass
