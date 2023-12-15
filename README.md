@@ -111,6 +111,13 @@ This is how into your mind will work each decision the user makes will lead to a
 
 ![Welcome Message error](docs/incorrect-format-welcome-msg.png)
 
+### Text delay 
+
+* This element will be showcased during every text output, this has been included to improve readability as the print function
+would just display the whole text making this difficult to read for the user which this feature fixed.
+
+![Text delay gif](gifs/text-delay.gif)
+
 ### Intro Message 
 
 * This intro message will greet the user with the name they entered. After this the intro message will continue allowing the user to either enter A to start the game or B to view the instructions, allowing the user to take there time before starting the game.
