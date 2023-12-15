@@ -14,7 +14,8 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
         - [Frequent User Goals](#frequent-user-goals)
         - [Future Implementations](#future-implementations)
     - [Design](#design)
-        -[Flow Chart](#flow-chart)
+        - [Flow Chart](#flow-chart)
+            - [Creative Decisions](#creative-decisions)
     - [Key Features](#key-features)
         - [Welcome Message](#welcome-message)
         - [Wrong Format Welcome Message](#wrong-format-welcome-message)
@@ -76,6 +77,25 @@ This is how into your mind will work each decision the user makes will lead to a
 ![Flow chart logic part 1](docs/into-your-mind-logic-part-1.png)
 ![Flow chart logic part 2](docs/into-your-mind-logic-part-2.png)
 ![Flow chart full diagram](docs/into-your-mind-logic-full-flow-chart.png)
+
+#### Creative decisions
+
+* For the flow chart I made some decisions on how I wanted the story to go for example, this character I have created in this universe is a scared child which falls asleep in detention so it is natural for the character to hide. 
+
+* Scenario two is where the character is a bit stumped as they saw the principle storm into the classroom, smashing desks out of the way trying to find you, this next creative choice made sense after what had just gone on before it.
+
+* Scenario three you choose to escape through an open window the other two options felt obvious and did not fit the characters story arc.
+
+* Scenario four you choose to quickly escape the bus rather than hiding like you did in the first act, which shows the progression of the character which is what I intended.
+
+* Scenario five you choose to wait for the police rather than trying to escape as surely the craziness just existed in the school right?
+
+* Scenario six you choose to be brave and see what the scream was this again made sense for the character arc. As you have been on choosing not to hide but face your fears.
+
+* Scenario seven you choose to fight the imposter, the game has been building towards this moment. I made this choice as this fit the character arc I was looking to create.
+
+* Final Scenario you choose to stop the imposter once and for all. This decision was made as the character letting the imposter escape did not fit with the rest of the story being brave and taking a chance to be a hero did which is why this decision was made.
+
 
 ## Key Features
 
