@@ -4,16 +4,16 @@ Welcome to the testing results of the text based action adventure game known as 
 
 ## CONTENTS
 
--[Into Your Mind Testing](#into-your-mind-testing)
-    -[Contents](#contents)
-    -[Testing Content](#testing-content)
-        -[Python Validation](#python-validation)
-        -[Solved Bugs](#solved-bugs)
-        -[Known Bugs](#known-bugs)
-        -[Manual Testing](#manual-testing)
-            -[Aims](#aims)
-            -[Testing Steps](#testing-steps)
-        -[Testing Results](#testing-results)
+- [Into Your Mind Testing](#into-your-mind-testing)
+    - [Contents](#contents)
+    - [Testing Content](#testing-content)
+        - [Python Validation](#python-validation)
+        - [Solved Bugs](#solved-bugs)
+        - [Known Bugs](#known-bugs)
+        - [Manual Testing](#manual-testing)
+            - [Aims](#aims)
+            - [Testing Steps](#testing-steps)
+        - [Testing Results](#testing-results)
 
 ## Testing Content
 
