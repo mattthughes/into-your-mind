@@ -43,18 +43,36 @@ def loading_elements(loading):
 
 
 def load_game_over(game_over_msg):
+    """
+    This function controls the speed output of the
+    text using flush to print to the console immedaietly
+    then using the time.sleep method to control the speed of the
+    output
+    """
     for i in game_over_msg:
         print(i, end="", flush=True)
         time.sleep(0.02)
 
 
 def load_game_title(title_msg):
+    """
+    This function controls the speed output of the
+    text using flush to print to the console immedaietly
+    then using the time.sleep method to control the speed of the
+    output
+    """
     for i in title_msg:
         print(i, end="", flush=True)
         time.sleep(0.04)
 
 
 def load_win_condition(win_msg):
+    """
+    This function controls the speed output of the
+    text using flush to print to the console immedaietly
+    then using the time.sleep method to control the speed of the
+    output
+    """
     for i in win_msg:
         print(i, end="", flush=True)
         time.sleep(0.03)
@@ -72,6 +90,11 @@ def exit_program(username):
 
 
 def game_over(username):
+    """
+    This is the game over function
+    which will be shown if the user
+    answers a scenario incorrectly
+    """
     clear()
     game_over_msg = """
 
@@ -92,7 +115,11 @@ def game_over(username):
     load_game_over(game_over_msg)
 
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             game_over_choice = input("Please type A or B or EXIT\n").upper()
@@ -139,6 +166,12 @@ def welcome_message():
 
 
 def end(username):
+    """
+    This function is the winning scenario
+    which will only be shown if the user
+    has managed to get every
+    scenario correct.
+    """
     clear()
 
     win_msg = """
@@ -163,7 +196,11 @@ def end(username):
     type A or if you would like to exit type EXIT\n
     """
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             end_choice = input("\nPlease type either A or EXIT\n").upper()
@@ -181,6 +218,11 @@ def end(username):
 
 
 def final_battle(username):
+    """
+    This function is targeting the scenarios
+    dictionary and using the get method to get
+    the child object and its key value.
+    """
     clear()
     text_msg = scenarios.get("final_battle")["message"]
 
@@ -189,7 +231,11 @@ def final_battle(username):
     final_choice_b = scenarios.get("final_battle")["final_choice_b"]
 
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             final_choice = input(TWO_CHOICES).upper()
@@ -212,6 +258,11 @@ def final_battle(username):
 
 
 def small_figure(username):
+    """
+    This function is targeting the scenarios
+    dictionary and using the get method to get
+    the child object and its key value.
+    """
     clear()
     text_msg = scenarios.get("small_figure")[f"message"]
 
@@ -222,7 +273,11 @@ def small_figure(username):
     figure_choice_c = scenarios.get("small_figure")["figure_choice_c"]
 
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             figure_choice = input(THREE_CHOICES).upper()
@@ -249,6 +304,11 @@ def small_figure(username):
 
 
 def inside_station(username):
+    """
+    This function is targeting the scenarios
+    dictionary and using the get method to get
+    the child object and its key value.
+    """
     clear()
     text_msg = scenarios.get("inside_station")["message"]
 
@@ -258,7 +318,11 @@ def inside_station(username):
     inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
 
     inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             inside_choice = input(THREE_CHOICES).upper()
@@ -295,7 +359,11 @@ def journey_home(username):
     output_delay(text_msg)
     home_option_a = scenarios.get("journey_home")["home_option_a"]
     home_option_b = scenarios.get("journey_home")["home_option_b"]
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             home_choice = input(TWO_CHOICES).upper()
@@ -327,7 +395,11 @@ def abandoned_bus(username):
     output_delay(text_msg)
     bus_choice_a = scenarios.get("abandoned_bus")["bus_choice_a"]
     bus_choice_b = scenarios.get("abandoned_bus")["bus_choice_b"]
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             bus_choice = input(TWO_CHOICES).upper()
@@ -350,7 +422,7 @@ def abandoned_bus(username):
 
 def open_door(username):
     """
-    This function id the third section of the game
+    This function is the third section of the game
     allowing the user to pick one out of three options
     """
     clear()
@@ -360,7 +432,11 @@ def open_door(username):
     door_option_b = scenarios.get("open_door")["door_option_b"]
     door_option_c = scenarios.get("open_door")["door_option_c"]
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             door_choice = input(THREE_CHOICES).upper()
@@ -397,7 +473,11 @@ def escaped_classroom(username):
     escaped_choice_b = scenarios.get("escaped_classroom")["escaped_choice_b"]
     escaped_choice_c = scenarios.get("escaped_classroom")["escaped_choice_c"]
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             escaped_choice = input(THREE_CHOICES).upper()
@@ -435,7 +515,11 @@ def run_game(username):
     first_choice_c = scenarios.get("classroom_scenario")["first_choice_c"]
     text_msg = scenarios.get("classroom_scenario")["message"]
     output_delay(text_msg)
-
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             first_choice = input(THREE_CHOICES).upper()
@@ -482,6 +566,11 @@ def view_instructions(username):
     the main menu
     """
     output_delay(text_msg)
+    """
+    Using a while loop to get the user input
+    and to keep running the loop until specific
+    conditions are met
+    """
     while True:
         try:
             start = input("\nPlease type either A or B\n").upper()
