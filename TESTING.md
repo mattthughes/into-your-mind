@@ -231,7 +231,7 @@ Small figure(special characters)| Please enter either A or B or C to load|Entere
 Small figure(characters other than A or B or C)| Please enter either A or B or C to load|Entered other characters|Please type either A or B or C shown|Pass
 Small figure (A)|Wrong option message loaded leading to game over screen|Entered A|Wrong option message loaded leading to game over screen shown|Pass
 Small figure(B)|Wrong option message loaded leading to game over screen|Entered B|Wrong option message loaded leading to game over screen shown|Pass
-Small figure (C)|Correct option message loaded leading to small figure scenario|Entered C|Correct option message loaded leading to small figure scenario| 
+Small figure (C)|Correct option message loaded leading to small figure scenario|Entered C|Correct option message loaded leading to small figure scenario|Pass
 Small figure(EXIT)|Message to thank the user for playing, to exit application|Typed Exit|Message to thank the user for playing, to exit application shown|Pass
 You died text|You died text to load when user selects wrong option|Entered wrong option|You died text loaded|Pass
 Game over choice|Please try again message to appear after you died text|Waited for you died text|Please try again message appeared|Pass
