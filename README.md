@@ -40,6 +40,8 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
         - [Content](#content)
         - [Acknowledgements](#acknowledgements)
 
+[Live project](https://into-your-mind-f09dce66f4f1.herokuapp.com/)
+
 ## Project Goals
 
 ### Client Goals
@@ -193,7 +195,22 @@ would just display the whole text making this difficult to read for the user whi
 
 ### How to deploy 
 
+This site is deployed using GitHub Pages - [Into Your Mind](https://github.com/mattthughes/into-your-mind)
+
+To deploy the site using GitHub Pages follow the following steps:
+
+1. Login or signup to GitHub
+2. Go to the repository for this project [mattthughes/into-your-mind](https://github.com/mattthughes/into-your-mind)
+3. Click the settings button.
+4. Select pages in the left hand navigation menu
+5. From the source dropdown select main branch changing this from root to main and then press save.
+6. After this the site has been deployed.
+
 ### How to fork
+
+1. Log in or sign u to GitHub.
+2. Go to the repository for this project [mattthughes/into-your-mind](https://github.com/mattthughes/into-your-mind)
+3. Click the Fork button on the right corner to fork the project.
 
 ### How to deploy on heroku
 

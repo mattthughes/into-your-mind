@@ -3,8 +3,9 @@ import os
 import sys
 from scenario import scenarios
 
-THREE_CHOICES = "\nPlease either type A or B or C check\n"
-TWO_CHOICES = "\nPlease either type A or B check\n"
+"Constant variables"
+THREE_CHOICES = "\nPlease either type A or B or C.\n"
+TWO_CHOICES = "\nPlease either type A or B.\n"
 
 
 def clear():
