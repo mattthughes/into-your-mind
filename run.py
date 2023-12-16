@@ -3,6 +3,8 @@ import os
 import sys
 from scenario import scenarios
 
+THREE_CHOICES = "Please either either A or B or C\n"
+
 
 def clear():
     """
@@ -434,7 +436,7 @@ def run_game(username):
 
     while True:
         try:
-            first_choice = input("\nPlease type A or B or C\n").upper()
+            first_choice = input(THREE_CHOICES).upper()
             if first_choice == "A":
                 output_delay(first_choice_a)
                 game_over(username)
@@ -451,7 +453,7 @@ def run_game(username):
                 exit_program(username)
                 break
             else:
-                print("Please enter the correct format either A or B or C\n")
+                print("Please use the correct format either A or B or C\n")
                 continue
         except ValueError as e:
             print(f"please enter the correct format user {username}")

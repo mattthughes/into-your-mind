@@ -35,6 +35,7 @@ Welcome to the testing results of the text based action adventure game known as 
 * Fixed a bug where the user could input numbers or special characters into the name field. To fix this I used the or not operator and the isalpha method to make sure the input being entered is a string and not a float, int or any special characters which fixed this issue.
 * Fixed scenario bugs when trying to import the dictionary, an error appeared stating that none is not an object. In order to access the nested dictionary I first used the get method to get the dictionary scenarios. Then used the brackets to get the nested object scenario one and then square brackets to get the child. Which fixed these bugs, allowed me to access the nested dictionary.
 * Fixed win message but, the text imported was much bigger than the terminal, to fix this I changed the image to fit the terminal which fixed this issue.
+* Fixed three choices bug by creating the first choice variable and assigning this the constant variable called three choices orginally only the else statement was printing to use a valid format but assigning the first choice variable to the constant variable three choices fixed this issue.
 
 ### Known bugs
 
