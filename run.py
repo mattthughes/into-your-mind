@@ -3,7 +3,8 @@ import os
 import sys
 from scenario import scenarios
 
-THREE_CHOICES = "Please either either A or B or C\n"
+THREE_CHOICES = "\nPlease either type A or B or C check\n"
+TWO_CHOICES = "\nPlease either type A or B check\n"
 
 
 def clear():
@@ -190,7 +191,7 @@ def final_battle(username):
 
     while True:
         try:
-            final_choice = input("\nPlease type either A or B\n").upper()
+            final_choice = input(TWO_CHOICES).upper()
             if final_choice == "A":
                 output_delay(final_choice_a)
                 end(username)
@@ -223,7 +224,7 @@ def small_figure(username):
 
     while True:
         try:
-            figure_choice = input("\nPlease type A or B or C\n").upper()
+            figure_choice = input(THREE_CHOICES).upper()
             if figure_choice == "A":
                 output_delay(figure_choice_a)
                 game_over(username)
@@ -259,7 +260,7 @@ def inside_station(username):
 
     while True:
         try:
-            inside_choice = input("\nPlease type A or B or C\n").upper()
+            inside_choice = input(THREE_CHOICES).upper()
             if inside_choice == "A":
                 output_delay(inside_choice_a)
                 game_over(username)
@@ -296,7 +297,7 @@ def journey_home(username):
 
     while True:
         try:
-            home_choice = input("\nPlease type either A or B\n").upper()
+            home_choice = input(TWO_CHOICES).upper()
             if home_choice == "A":
                 output_delay(home_option_a)
                 inside_station(username)
@@ -328,7 +329,7 @@ def abandoned_bus(username):
 
     while True:
         try:
-            bus_choice = input("\nPlease type either A or B\n").upper()
+            bus_choice = input(TWO_CHOICES).upper()
             if bus_choice == "A":
                 output_delay(bus_choice_a)
                 journey_home(username)
@@ -361,7 +362,7 @@ def open_door(username):
 
     while True:
         try:
-            door_choice = input("\nPlease type either A or B or C\n").upper()
+            door_choice = input(THREE_CHOICES).upper()
             if door_choice == "A":
                 output_delay(door_option_a)
                 game_over(username)
@@ -398,7 +399,7 @@ def escaped_classroom(username):
 
     while True:
         try:
-            escaped_choice = input("\nPlease type A or B or C.\n").upper()
+            escaped_choice = input(THREE_CHOICES).upper()
             if escaped_choice == "A":
                 output_delay(escaped_choice_a)
                 open_door(username)
