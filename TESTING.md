@@ -19,6 +19,8 @@ Welcome to the testing results of the text based action adventure game known as 
 
 ## Python Validation
 
+![Python Validation](docs/python-validator.png)
+
 ### Solved Bugs
 
 * Fixed a bug where the while loop at the beginning continued to loop or was only printing the valid statement once with the break keyword. In order to fix this I used the try and except methods in the while loop, which checked to see if the conditions were met. If they were the code would run, unless there was a value error which would then  print out the else statement. Asking the user to use the correct format the loop would keep running until the else statement was met.
