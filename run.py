@@ -8,6 +8,7 @@ from colorama import Fore, Back, Style
 "Constant variables"
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
 TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
+WRONG_FORMAT = Fore.RED + "\n Please use the correct format\n"
 
 
 def clear():
@@ -132,7 +133,7 @@ def game_over(username):
             elif game_over_choice == "EXIT":
                 exit_program(Fore.WHITE + username)
             else:
-                output_delay(Fore.RED + "Please enter A or B or EXIT\n")
+                output_delay(WRONG_FORMAT)
         except ValueError as e:
             output_delay("Please enter A or B or EXIT\n")
 
@@ -213,7 +214,7 @@ def end(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(Fore.RED + "Please type either A or EXIT\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             output_delay(f"{e} Please type either A or EXIT\n")
@@ -253,7 +254,7 @@ def final_battle(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(Fore.RED + "Please type either A or B\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             output_delay(f"{e} Please type either A or B\n")
@@ -299,7 +300,7 @@ def small_figure(username):
                 exit_program(username)
                 break
             else:
-                output_delay(Fore.RED + "Please enter either A or B or C\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             output_delay(f"{e} Please use the correct format\n")
@@ -344,7 +345,7 @@ def inside_station(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(Fore.RED + "Please type A or B or C\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             output_delay("Please type A or B or C\n")
@@ -380,7 +381,7 @@ def journey_home(username):
             elif home_choice == "EXIT":
                 exit_program(username)
             else:
-                output_delay(Fore.RED + "\nPlease type either A or B.\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             print(f"{e} please use the correct format\n")
@@ -416,7 +417,7 @@ def abandoned_bus(username):
             elif bus_choice == "EXIT":
                 exit_program(Fore.WHITE + username)
             else:
-                print(Fore.RED + "Please type either A or B\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             print("Invalid format please type either A or B\n")
@@ -458,7 +459,7 @@ def open_door(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(Fore.RED + "Please type either A or B or C.\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             print(f"{e} please fill in the right format\n")
@@ -499,7 +500,7 @@ def escaped_classroom(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                print(Fore.RED + f"Please type either A or B or C. {username}\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             print("Invalid format please try again.\n")
@@ -541,7 +542,7 @@ def run_game(username):
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(Fore.RED + "Please type either A or B or C\n")
+                output_delay(WRONG_FORMAT)
                 continue
         except ValueError as e:
             print(f"please enter the correct format user {username}")
@@ -585,7 +586,7 @@ def view_instructions(username):
             elif start == "EXIT":
                 exit_program(Fore.WHITE + username)
             else:
-                output_delay(Fore.RED + "\nPlease enter either A or B\n")
+                output_delay(WRONG_FORMAT)
         except ValueError as e:
             output_delay("Invalid format please use the correct format\n")
 
@@ -612,7 +613,7 @@ def intro(username):
                 view_instructions(username)
                 break
             else:
-                output_delay(Fore.RED + "Please enter a valid format\n")
+                output_delay(WRONG_FORMAT)
         except ValueError as e:
             output_delay(f"\n {e} please pick the correct one\n")
 
