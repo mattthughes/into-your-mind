@@ -6,8 +6,8 @@ from colorama import Fore, Back, Style
 
 
 "Constant variables"
-THREE_CHOICES = "\nPlease either type A or B or C.\n"
-TWO_CHOICES = "\nPlease either type A or B.\n"
+THREE_CHOICES = Fore.WHITE + "\nPlease either type A or B or C.\n"
+TWO_CHOICES = Fore.WHITE + "\nPlease either type A or B.\n"
 
 
 def clear():
@@ -86,7 +86,7 @@ def exit_program(username):
     while thanking the user for playing
     """
     clear()
-    loading_elements("Exiting Game.....\n")
+    loading_elements(Fore.WHITE + "Exiting Game.....\n")
     output_delay(f"Thank you for playing {username}")
     sys.exit()
 
@@ -126,13 +126,13 @@ def game_over(username):
         try:
             game_over_choice = input("Please type A or B or EXIT\n").upper()
             if game_over_choice == "A":
-                run_game(username)
+                run_game(Fore.WHITE + username)
             elif game_over_choice == "B":
                 welcome_message()
             elif game_over_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
             else:
-                output_delay("Please enter A or B or EXIT\n")
+                output_delay(Fore.RED + "Please enter A or B or EXIT\n")
         except ValueError as e:
             output_delay("Please enter A or B or EXIT\n")
 
@@ -161,9 +161,9 @@ def welcome_message():
         username = input("What is your name?\n")
 
         if not username or not username.isalpha():
-            print("Please enter your name with alphabet letters.\n")
+            print(Fore.RED + "Please enter your name with alphabet letters.\n")
         else:
-            intro(username)
+            intro(Fore.WHITE + username)
             break
 
 
@@ -184,7 +184,7 @@ def end(username):
     ▀▀▄▄▄▀▀▄▄▄▄▀▀▄▄▄▄▀▀▀▀▀▄▄▄▀▄▄▄▀▀▄▄▄▀▄▄▄▀▀▄▄▀
     """
 
-    load_win_condition(win_msg)
+    load_win_condition(Fore.GREEN + win_msg)
 
     text_msg = f"""
     Congratulations you have beaten the game,
@@ -197,7 +197,7 @@ def end(username):
     to decide. If you would like to play the game again
     type A or if you would like to exit type EXIT\n
     """
-    output_delay(text_msg)
+    output_delay(Fore.WHITE + text_msg)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -207,13 +207,13 @@ def end(username):
         try:
             end_choice = input("\nPlease type either A or EXIT\n").upper()
             if end_choice == "A":
-                run_game(username)
+                run_game(Fore.WHITE + username)
                 break
             elif end_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay("Please type either A or EXIT\n")
+                output_delay(Fore.RED + "Please type either A or EXIT\n")
                 continue
         except ValueError as e:
             output_delay(f"{e} Please type either A or EXIT\n")
@@ -242,18 +242,18 @@ def final_battle(username):
         try:
             final_choice = input(TWO_CHOICES).upper()
             if final_choice == "A":
-                output_delay(final_choice_a)
+                output_delay(Fore.WHITE + final_choice_a)
                 end(username)
                 break
             elif final_choice == "B":
-                output_delay(final_choice_b)
+                output_delay(Fore.WHITE + final_choice_b)
                 game_over(username)
                 break
             elif final_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay("Please type either A or B\n")
+                output_delay(Fore.RED + "Please type either A or B\n")
                 continue
         except ValueError as e:
             output_delay(f"{e} Please type either A or B\n")
@@ -284,22 +284,22 @@ def small_figure(username):
         try:
             figure_choice = input(THREE_CHOICES).upper()
             if figure_choice == "A":
-                output_delay(figure_choice_a)
+                output_delay(Fore.WHITE + figure_choice_a)
                 game_over(username)
                 break
             elif figure_choice == "B":
-                output_delay(figure_choice_b)
+                output_delay(Fore.WHITE + figure_choice_b)
                 final_battle(username)
                 break
             elif figure_choice == "C":
-                output_delay(figure_choice_c)
+                output_delay(Fore.WHITE + figure_choice_c)
                 game_over(username)
                 break
             elif figure_choice == "EXIT":
                 exit_program(username)
                 break
             else:
-                output_delay("Please enter either A or B or C\n")
+                output_delay(Fore.RED + "Please enter either A or B or C\n")
                 continue
         except ValueError as e:
             output_delay(f"{e} Please use the correct format\n")
@@ -329,22 +329,22 @@ def inside_station(username):
         try:
             inside_choice = input(THREE_CHOICES).upper()
             if inside_choice == "A":
-                output_delay(inside_choice_a)
+                output_delay(Fore.WHITE + inside_choice_a)
                 game_over(username)
                 break
             elif inside_choice == "B":
-                output_delay(inside_choice_b)
+                output_delay(Fore.WHITE + inside_choice_b)
                 game_over(username)
                 break
             elif inside_choice == "C":
-                output_delay(inside_choice_c)
+                output_delay(Fore.WHITE + inside_choice_c)
                 small_figure(username)
                 break
             elif inside_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay("Please type A or B or C\n")
+                output_delay(Fore.RED + "Please type A or B or C\n")
                 continue
         except ValueError as e:
             output_delay("Please type A or B or C\n")
@@ -370,17 +370,17 @@ def journey_home(username):
         try:
             home_choice = input(TWO_CHOICES).upper()
             if home_choice == "A":
-                output_delay(home_option_a)
+                output_delay(Fore.WHITE + home_option_a)
                 inside_station(username)
                 break
             elif home_choice == "B":
-                output_delay(home_option_b)
+                output_delay(Fore.WHITE + home_option_b)
                 game_over(username)
                 break
             elif home_choice == "EXIT":
                 exit_program(username)
             else:
-                output_delay("\nPlease type either A or B.\n")
+                output_delay(Fore.RED + "\nPlease type either A or B.\n")
                 continue
         except ValueError as e:
             print(f"{e} please use the correct format\n")
@@ -406,17 +406,17 @@ def abandoned_bus(username):
         try:
             bus_choice = input(TWO_CHOICES).upper()
             if bus_choice == "A":
-                output_delay(bus_choice_a)
+                output_delay(Fore.WHITE + bus_choice_a)
                 journey_home(username)
                 break
             elif bus_choice == "B":
-                output_delay(bus_choice_b)
+                output_delay(Fore.WHITE + bus_choice_b)
                 game_over(username)
                 break
             elif bus_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
             else:
-                print(f"invalid format {username} Please type either A or B\n")
+                print(Fore.RED + "Please type either A or B\n")
                 continue
         except ValueError as e:
             print("Invalid format please type either A or B\n")
@@ -443,22 +443,22 @@ def open_door(username):
         try:
             door_choice = input(THREE_CHOICES).upper()
             if door_choice == "A":
-                output_delay(door_option_a)
+                output_delay(Fore.WHITE + door_option_a)
                 game_over(username)
                 break
             elif door_choice == "B":
-                output_delay(door_option_b)
+                output_delay(Fore.WHITE + door_option_b)
                 game_over(username)
                 break
             elif door_choice == "C":
-                output_delay(door_option_c)
+                output_delay(Fore.WHITE + door_option_c)
                 abandoned_bus(username)
                 break
             elif door_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay("Please type either A or B or C.\n")
+                output_delay(Fore.RED + "Please type either A or B or C.\n")
                 continue
         except ValueError as e:
             print(f"{e} please fill in the right format\n")
@@ -484,22 +484,22 @@ def escaped_classroom(username):
         try:
             escaped_choice = input(THREE_CHOICES).upper()
             if escaped_choice == "A":
-                output_delay(escaped_choice_a)
+                output_delay(Fore.WHITE + escaped_choice_a)
                 open_door(username)
                 break
             elif escaped_choice == "B":
-                output_delay(escaped_choice_b)
+                output_delay(Fore.WHITE + escaped_choice_b)
                 game_over(username)
                 break
             elif escaped_choice == "C":
-                output_delay(escaped_choice_c)
+                output_delay(Fore.WHITE + escaped_choice_c)
                 game_over(username)
                 break
             elif escaped_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
-                print(f"Please type either A or B or C. {username}\n")
+                print(Fore.RED + f"Please type either A or B or C. {username}\n")
                 continue
         except ValueError as e:
             print("Invalid format please try again.\n")
@@ -538,7 +538,7 @@ def run_game(username):
                 escaped_classroom(username)
                 break
             elif first_choice == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
                 break
             else:
                 output_delay(Fore.RED + "Please type either A or B or C\n")
@@ -577,13 +577,13 @@ def view_instructions(username):
         try:
             start = input("\nPlease type either A or B\n").upper()
             if start == "A":
-                run_game(username)
+                run_game(Fore.WHITE + username)
                 break
             elif start == "B":
-                intro(username)
+                intro(Fore.WHITE + username)
                 break
             elif start == "EXIT":
-                exit_program(username)
+                exit_program(Fore.WHITE + username)
             else:
                 output_delay(Fore.RED + "\nPlease enter either A or B\n")
         except ValueError as e:
