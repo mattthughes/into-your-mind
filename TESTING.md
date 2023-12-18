@@ -1,4 +1,4 @@
-[Into Your Mind Title](docs/into-your-mind-title.png)
+![Into Your Mind Title](docs/into-your-mind-title.png)
 
 # Into Your Mind Testing
 
