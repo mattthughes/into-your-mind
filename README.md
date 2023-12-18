@@ -34,6 +34,7 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
         - [How to deploy](#how-to-deploy)
         - [How to fork](#how-to-fork)
         - [How to deploy on heroku](#how-to-clone)
+    - [Testing]
     - [Credits](#credits)
         - [Media](#media)
         - [Code](#code)
@@ -219,6 +220,10 @@ To deploy the site using GitHub Pages follow the following steps:
 3. Click the Fork button on the right corner to fork the project.
 
 ### How to deploy on heroku
+
+## Testing
+
+* I tested this project extensively, testing all scenarios making sure they all had the intended outcome, this was all documented in the TestingMd file which can be viewed here [TestingMd](https://github.com/mattthughes/into-your-mind/blob/main/TESTING.md)
 
 ## Credits 
 

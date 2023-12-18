@@ -1,3 +1,5 @@
+[Into Your Mind Title](docs/into-your-mind-title.png)
+
 # Into Your Mind Testing
 
 Welcome to the testing results of the text based action adventure game known as Into Your Mind in this document you will find all the testing results, such as solved bugs and how they were fixed, also the manual testing and how each element was tested making sure each element was working as intended.
