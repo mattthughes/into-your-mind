@@ -224,8 +224,18 @@ To deploy the site using GitHub Pages follow the following steps:
 
 ### Media 
 
+* You died, Game Over text taken from [FSymbols](https://fsymbols.com/)
+
 #### Code
 
-#### Content 
+* The text delay functions were inspired by geeksforgeeks and customised to my projects needs [Text Delay function](https://www.geeksforgeeks.org/how-to-add-time-delay-in-python/)
+
+* The clear function was inspired by Dev.to and was customised to my projects needs [Clear function](https://dev.to/lewiskori/how-to-clear-screen-in-python-terminal-10el)
+#### Content
+
+* All content was written by Matthew Hughes
 
 #### Acknowledgements
+
+* I would like to thank my mentor Graeme for his help during our sessions, which helped me make changes and improvements to the project where neccessary.
+* I would like to thank my friends and family, who helped me with testing such as reporting any bugs they did encounter while playing the game. This was very helpful when fixing bugs.
