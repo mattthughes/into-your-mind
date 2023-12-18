@@ -37,6 +37,7 @@ Welcome to the testing results of the text based action adventure game known as 
 * Fixed win message but, the text imported was much bigger than the terminal, to fix this I changed the image to fit the terminal which fixed this issue.
 * Fixed three choices bug by creating the first choice variable and assigning this the constant variable called three choices orginally only the else statement was printing to use a valid format but assigning the first choice variable to the constant variable three choices fixed this issue.
 * Fixed colorama errors as when I changed the font to red, the rest of the text would remain red. In order to fix this I changed the font back to white for all scenarios and loading outputs.
+* Fixed colorama errors on deployed heroku application. In order to fix this I updated the requirements.txt file using the pip3 freeze > requirements.txt method which fixed this issue.
 
 ### Known bugs
 

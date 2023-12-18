@@ -158,7 +158,7 @@ def welcome_message():
     output_delay(text_msg)
 
     while True:
-        username = input("What is your name?\n")
+        username = input(Fore.WHITE + "What is your name?\n")
 
         if not username or not username.isalpha():
             print(Fore.RED + "Please enter your name with alphabet letters.\n")
@@ -575,7 +575,7 @@ def view_instructions(username):
     """
     while True:
         try:
-            start = input("\nPlease type either A or B\n").upper()
+            start = input(TWO_CHOICES).upper()
             if start == "A":
                 run_game(Fore.WHITE + username)
                 break
@@ -604,7 +604,7 @@ def intro(username):
 
     while True:
         try:
-            intro_msg = input("\nPlease type either A or B\n").upper()
+            intro_msg = input(Fore.WHITE + TWO_CHOICES).upper()
             if intro_msg == "A":
                 run_game(username)
                 break
