@@ -126,6 +126,12 @@ would just display the whole text making this difficult to read for the user whi
 
 ![Intro message](docs/intro-msg.png)
 
+### Wrong Format Intro Message
+
+* This will be shown if the user doesn't enter the correct format. An error message will appear asking the user to enter the correct input while the statement will repeat asking the user to enter either A to start the game or B to view the instrctions.
+
+![Wrong Format Intro Message](docs/wrong-format-intro.png)
+
 ### Instructions
 
 * This element will teach the user how  to play the game informing them the rules of the game, teaching them about how to answer the different scenarios that are presented to the user. The instructions will also contain valuable information for the user such as informing the user they are able to leave the game at any time by typing exit. This will all be showcased in the instructions element, making sure the user does not get frustrated and understands the game before starting.
