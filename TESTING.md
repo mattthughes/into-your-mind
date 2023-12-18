@@ -44,7 +44,19 @@ Welcome to the testing results of the text based action adventure game known as 
 
 #### Aims
 
+* The aim is to make sure all elements work as intended without any console bugs, these bugs will be any invalid input such as enterting numbers, random letters or special characters are all bugs I am looking to avoid.
+* This will be done by making sure all if else statements work as intended and have the desired outcome.
+* Make sure the user can enter there first name, with this being tracked, if the user enters the wrong input an error message is shown informing the user what is wrong.
+* The user is able to complete the game.
+* The user is able to exit the application at any point.
+
 #### Testing Steps
+
+* I will first make sure all scenarios can be answered correctly leading to the expected outcome. While making sure the game can be completed.
+* Next I will make sure that the user can not enter the wrong input. If the user does an error message should appear stating what to do next.
+* After this I will make sure if the user answers the scenario incorrectly, the game should load the game over screen.
+* Once this has been completed I will make sure the text has the correct colour such as errors being in red, the winning screen in green and normal text in white, making sure the colours work as intended and for example do not stay red after an error message.
+* This testing will completed using the deployed heroku application with all testing recorded in the tables below.
 
 ### Testing Results
 
