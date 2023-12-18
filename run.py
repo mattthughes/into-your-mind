@@ -8,7 +8,7 @@ from colorama import Fore, Back, Style
 "Constant variables"
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
 TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
-WRONG_FORMAT = Fore.RED + "\n Please use the correct format\n"
+WRONG_FORMAT = Fore.RED + "\nPlease use the correct format\n"
 
 
 def clear():
