@@ -2,6 +2,8 @@ import time
 import os
 import sys
 from scenario import scenarios
+from colorama import Fore, Back, Style
+
 
 "Constant variables"
 THREE_CHOICES = "\nPlease either type A or B or C.\n"
@@ -509,7 +511,7 @@ def run_game(username):
     to read a senario and make a decision
     """
     clear()
-    loading_elements("Starting game....\n")
+    loading_elements(Fore.WHITE + "Starting game....\n")
     first_choice_a = scenarios.get("classroom_scenario")["first_choice_a"]
     first_choice_b = scenarios.get("classroom_scenario")["first_choice_b"]
     first_choice_c = scenarios.get("classroom_scenario")["first_choice_c"]
@@ -524,22 +526,22 @@ def run_game(username):
         try:
             first_choice = input(THREE_CHOICES).upper()
             if first_choice == "A":
-                output_delay(first_choice_a)
+                output_delay(Fore.WHITE + first_choice_a)
                 game_over(username)
                 break
             elif first_choice == "B":
-                output_delay(first_choice_b)
+                output_delay(Fore.WHITE + first_choice_b)
                 game_over(username)
                 break
             elif first_choice == "C":
-                output_delay(first_choice_c)
+                output_delay(Fore.WHITE + first_choice_c)
                 escaped_classroom(username)
                 break
             elif first_choice == "EXIT":
                 exit_program(username)
                 break
             else:
-                print("Please use the correct format either A or B or C\n")
+                output_delay(Fore.RED + "Please type either A or B or C\n")
                 continue
         except ValueError as e:
             print(f"please enter the correct format user {username}")
@@ -552,7 +554,7 @@ def view_instructions(username):
     they will need while playing the game
     """
     clear()
-    loading_elements("\nInstructions loading....\n")
+    loading_elements(Fore.WHITE + "\nInstructions loading....\n")
     text_msg = """
     Into Your Mind is a text based action adventure game
     where your decisions really matter. During the game
@@ -583,7 +585,7 @@ def view_instructions(username):
             elif start == "EXIT":
                 exit_program(username)
             else:
-                output_delay("\nPlease enter either A or B\n")
+                output_delay(Fore.RED + "\nPlease enter either A or B\n")
         except ValueError as e:
             output_delay("Invalid format please use the correct format\n")
 
@@ -598,7 +600,7 @@ def intro(username):
     Welcome to Into Your Mind {username} if you would like to Start the game
     type A or if you would like to view the instructions type B
     """
-    output_delay(text_msg)
+    output_delay(Fore.WHITE + text_msg)
 
     while True:
         try:
@@ -610,7 +612,7 @@ def intro(username):
                 view_instructions(username)
                 break
             else:
-                output_delay("Please enter a valid format\n")
+                output_delay(Fore.RED + "Please enter a valid format\n")
         except ValueError as e:
             output_delay(f"\n {e} please pick the correct one\n")
 
