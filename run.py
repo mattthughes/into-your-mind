@@ -141,7 +141,7 @@ def game_over(username):
 class Character:
     def __init__(self):
         while True:
-            self.username = input(Fore.WHITE + "What is your name\n")
+            self.username = input(Fore.WHITE + "\nWhat is your name\n")
             if not self.username or not self.username.isalpha():
                 print(Fore.RED + "Enter your name with alphabet letters.\n")
             else:
