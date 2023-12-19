@@ -221,6 +221,21 @@ To deploy the site using GitHub Pages follow the following steps:
 
 ### How to deploy on heroku
 
+1. Log in to Heroku or set up an account.
+2. From the dashboard click create new app.
+3. Name your app this will need to be unique as you cannot use an existing application name.
+4. Click on the settings menu.
+5. Scroll down to the Config vars and click Reveal Config Vars.
+6. In the key field enter the following information. Enter Key into the PORT box and enter 8000 into the Value box.
+7. If there is a credentails file, make sure this has an appropriate name such as creds.json.
+8. Scroll down to Buildpacks and click Add Buildpacks.
+9. Select Python first and click saved changes and then click nodejs second, its very important to have these two langagues in this order otherwise your application will not work correctly.
+10. Scroll to the top of the page and select Deploy.
+11. In the deployment method select GitHub and confirm you would like to connect to GitHub.
+12. Enter your GitHub repository Id and then select connect.
+13. If you would like every change you make on your IDE to appear on the deployed app click Enable Automatic Deploy. Otherwise you can deploy this manually each time to have more control of deploys.
+14. For the last step click Deploy Branch in the manual deploy section this will start to the build the app slowly once this has been built a deployed link will appear allowing to to view your deployed app.
+
 ## Testing
 
 * I tested this project extensively, testing all scenarios making sure they all had the intended outcome, this was all documented in the TestingMd file which can be viewed here [TestingMd](https://github.com/mattthughes/into-your-mind/blob/main/TESTING.md)
