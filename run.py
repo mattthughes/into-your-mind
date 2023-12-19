@@ -125,7 +125,7 @@ def game_over(username):
     """
     while True:
         try:
-            game_over_choice = input("Please type A or B or EXIT\n").upper()
+            game_over_choice = input("\nPlease type A or B or EXIT\n").upper()
             if game_over_choice == "A":
                 run_game(Fore.WHITE + username)
             elif game_over_choice == "B":
