@@ -34,7 +34,7 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
         - [How to deploy](#how-to-deploy)
         - [How to fork](#how-to-fork)
         - [How to deploy on heroku](#how-to-clone)
-    - [Testing]
+    - [Testing](#testing)
     - [Credits](#credits)
         - [Media](#media)
         - [Code](#code)
