@@ -42,8 +42,12 @@ Welcome to the testing results of the text based action adventure game known as 
 * Fixed three choices bug by creating the first choice variable and assigning this the constant variable called three choices orginally only the else statement was printing to use a valid format but assigning the first choice variable to the constant variable three choices fixed this issue.
 * Fixed colorama errors as when I changed the font to red, the rest of the text would remain red. In order to fix this I changed the font back to white for all scenarios and loading outputs.
 * Fixed colorama errors on deployed heroku application. In order to fix this I updated the requirements.txt file using the pip3 freeze > requirements.txt method which fixed this issue.
+* Fixed Class bugs by defining username as an empty string and then passing this new variable into the introduction file. When I needed to use the class I created a variable called p1 which stands for player one. This allowed me to have multiple characters if I needed to. To use the variable p1 I also used dot notation to get the function introduction which fixed these issues.
 
 ### Known bugs
+
+* Was many bugs for the timer tried using multiprocessing and threading to run two loops coccurently. However there were to many issues so this was removed from the final project.
+* No other known bugs.
 
 ### Manual Testing
 

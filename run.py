@@ -140,12 +140,14 @@ def game_over(username):
 
 class Character:
     def __init__(self):
+        self.username = ""
+    def introduction(username):
         while True:
-            self.username = input(Fore.WHITE + "\nWhat is your name\n")
-            if not self.username or not self.username.isalpha():
+            username = input(Fore.WHITE + "\nWhat is your name\n")
+            if not username or not username.isalpha():
                 print(Fore.RED + "Enter your name with alphabet letters.\n")
             else:
-                intro(Fore.WHITE + self.username)
+                intro(Fore.WHITE + username)
                 break
 
 
@@ -169,7 +171,9 @@ def welcome_message():
     """
     output_delay(text_msg)
 
-    Character()
+    p1 = Character()
+
+    p1.introduction()
 
 
 def end(username):
