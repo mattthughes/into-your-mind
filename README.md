@@ -244,7 +244,7 @@ To deploy the site using GitHub Pages follow the following steps:
 
 ### Media 
 
-* You died, Game Over text taken from [FSymbols](https://fsymbols.com/)
+* You died, Game Over, Into Your Mind text taken from [FSymbols](https://fsymbols.com/)
 
 #### Code
 
