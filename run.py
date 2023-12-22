@@ -138,15 +138,6 @@ def game_over(username):
             output_delay("Please enter A or B or EXIT\n")
 
 
-def timer(time_remaining):
-    while time_remaining:
-        minutes, seconds = divmod(time_remaining, 60)
-        time_format = Fore.GREEN + "{:02d}:{:02d}".format(minutes, seconds)
-        print(time_format, end="\r")
-        time.sleep(1)
-        time_remaining -= 1
-
-
 class Character:
     def __init__(self):
         while True:
@@ -630,3 +621,5 @@ def intro(username):
         except ValueError as e:
             output_delay(f"\n {e} please pick the correct one\n")
 
+if __name__ == "__main__":
+    welcome_message()
