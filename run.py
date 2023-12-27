@@ -9,6 +9,11 @@ from colorama import Fore, Back, Style
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
 TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
 WRONG_FORMAT = Fore.RED + "\nPlease use the correct format\n"
+GAME_OVER_MESSAGE_DURATION = 0.02
+GAME_TITLE_MESSAGE_DURATION = 0.04
+SCENARIOS_DURATION = 0.07
+LOADING_ELEMENTS_DURATION = 0.1
+WIN_MESSAGE_DURATION = 0.03
 
 
 def clear():
@@ -21,64 +26,16 @@ def clear():
     os.system("clear")
 
 
-def output_delay(text_msg):
+def display_message(message, sleep_duration):
     """
     This function controls the speed output of the
     text using flush to print to the console immedaietly
     then using the time.sleep method to control the speed of the
     output
     """
-    for i in text_msg:
+    for i in message:
         print(i, end="", flush=True)
-        time.sleep(0.07)
-
-
-def loading_elements(loading):
-    """
-    This function controls the speed output of the
-    text using flush to print to the console immedaietly
-    then using the time.sleep method to control the speed of the
-    output
-    """
-    for i in loading:
-        print(i, end="", flush=True)
-        time.sleep(0.1)
-
-
-def load_game_over(game_over_msg):
-    """
-    This function controls the speed output of the
-    text using flush to print to the console immedaietly
-    then using the time.sleep method to control the speed of the
-    output
-    """
-    for i in game_over_msg:
-        print(i, end="", flush=True)
-        time.sleep(0.02)
-
-
-def load_game_title(title_msg):
-    """
-    This function controls the speed output of the
-    text using flush to print to the console immedaietly
-    then using the time.sleep method to control the speed of the
-    output
-    """
-    for i in title_msg:
-        print(i, end="", flush=True)
-        time.sleep(0.04)
-
-
-def load_win_condition(win_msg):
-    """
-    This function controls the speed output of the
-    text using flush to print to the console immedaietly
-    then using the time.sleep method to control the speed of the
-    output
-    """
-    for i in win_msg:
-        print(i, end="", flush=True)
-        time.sleep(0.03)
+        time.sleep(sleep_duration)
 
 
 def exit_program(username):
@@ -87,7 +44,7 @@ def exit_program(username):
     while thanking the user for playing
     """
     clear()
-    loading_elements(Fore.WHITE + "Exiting Game.....\n")
+    display_message("Exiting Game.....\n", LOADING_ELEMENTS_DURATION)
     output_delay(f"\nThank you for playing {username}")
     sys.exit()
 
@@ -115,9 +72,9 @@ def game_over(username):
     you would like to exit the game type EXIT.
     """
 
-    load_game_over(game_over_msg)
+    display_message(game_over_msg, GAME_OVER_MESSAGE_DURATION)
 
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -164,13 +121,13 @@ def welcome_message():
     █ █▄░█ ▀█▀ █▀█   █▄█ █▀█ █░█ █▀█   █▀▄▀█ █ █▄░█ █▀▄
     █ █░▀█ ░█░ █▄█   ░█░ █▄█ █▄█ █▀▄   █░▀░█ █ █░▀█ █▄▀
     """
-    load_game_title(title_intro)
+    display_message(title_intro, GAME_TITLE_MESSAGE_DURATION)
 
     text_msg = """
     Welcome to your nightmare, the journey to madness has begun
     but how crazy can it truly get?
     """
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
 
     p1 = Character()
 
@@ -194,7 +151,7 @@ def end(username):
     ▀▀▄▄▄▀▀▄▄▄▄▀▀▄▄▄▄▀▀▀▀▀▄▄▄▀▄▄▄▀▀▄▄▄▀▄▄▄▀▀▄▄▀
     """
 
-    load_win_condition(Fore.GREEN + win_msg)
+    display_message(Fore.GREEN, win_msg, WIN_MESSAGE_DURATION)
 
     text_msg = f"""
     Congratulations you have beaten the game,
@@ -207,7 +164,7 @@ def end(username):
     to decide. If you would like to play the game again
     type A or if you would like to exit type EXIT\n
     """
-    output_delay(Fore.WHITE + text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -241,8 +198,7 @@ def final_battle(username):
     final_choice_a = scenarios.get("final_battle")["final_choice_a"]
 
     final_choice_b = scenarios.get("final_battle")["final_choice_b"]
-
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -284,7 +240,7 @@ def small_figure(username):
 
     figure_choice_c = scenarios.get("small_figure")["figure_choice_c"]
 
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -330,6 +286,7 @@ def inside_station(username):
     inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
 
     inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -368,7 +325,7 @@ def journey_home(username):
     clear()
     text_msg = scenarios.get("journey_home")["message"]
 
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     home_option_a = scenarios.get("journey_home")["home_option_a"]
     home_option_b = scenarios.get("journey_home")["home_option_b"]
     """
@@ -404,7 +361,7 @@ def abandoned_bus(username):
     clear()
 
     text_msg = scenarios.get("abandoned_bus")["message"]
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     bus_choice_a = scenarios.get("abandoned_bus")["bus_choice_a"]
     bus_choice_b = scenarios.get("abandoned_bus")["bus_choice_b"]
     """
@@ -443,7 +400,7 @@ def open_door(username):
     door_option_a = scenarios.get("open_door")["door_option_a"]
     door_option_b = scenarios.get("open_door")["door_option_b"]
     door_option_c = scenarios.get("open_door")["door_option_c"]
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -484,7 +441,7 @@ def escaped_classroom(username):
     escaped_choice_a = scenarios.get("escaped_classroom")["escaped_choice_a"]
     escaped_choice_b = scenarios.get("escaped_classroom")["escaped_choice_b"]
     escaped_choice_c = scenarios.get("escaped_classroom")["escaped_choice_c"]
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -521,12 +478,12 @@ def run_game(username):
     to read a senario and make a decision
     """
     clear()
-    loading_elements(Fore.WHITE + "Starting game....\n")
+    display_message("Starting game....\n", LOADING_ELEMENTS_DURATION)
     first_choice_a = scenarios.get("classroom_scenario")["first_choice_a"]
     first_choice_b = scenarios.get("classroom_scenario")["first_choice_b"]
     first_choice_c = scenarios.get("classroom_scenario")["first_choice_c"]
     text_msg = scenarios.get("classroom_scenario")["message"]
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -536,22 +493,22 @@ def run_game(username):
         try:
             first_choice = input(THREE_CHOICES).upper()
             if first_choice == "A":
-                output_delay(Fore.WHITE + first_choice_a)
+                display_message(first_choice_a, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif first_choice == "B":
-                output_delay(Fore.WHITE + first_choice_b)
+                display_message(first_choice_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif first_choice == "C":
-                output_delay(Fore.WHITE + first_choice_c)
+                display_message(first_choice_c, SCENARIOS_DURATION)
                 escaped_classroom(username)
                 break
             elif first_choice == "EXIT":
                 exit_program(Fore.WHITE + username)
                 break
             else:
-                output_delay(WRONG_FORMAT)
+                display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
             print(f"please enter the correct format user {username}")
@@ -564,7 +521,7 @@ def view_instructions(username):
     they will need while playing the game
     """
     clear()
-    loading_elements(Fore.WHITE + "\nInstructions loading....\n")
+    display_message("\nInstructions loading....\n", LOADING_ELEMENTS_DURATION)
     text_msg = """
     Into Your Mind is a text based action adventure game
     where your decisions really matter. During the game
@@ -577,7 +534,7 @@ def view_instructions(username):
     Type A to start the game or Type B to return to
     the main menu
     """
-    output_delay(text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -610,7 +567,7 @@ def intro(username):
     Welcome to Into Your Mind {username} if you would like to Start the game
     type A or if you would like to view the instructions type B
     """
-    output_delay(Fore.WHITE + text_msg)
+    display_message(text_msg, SCENARIOS_DURATION)
 
     while True:
         try:
