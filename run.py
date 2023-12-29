@@ -83,13 +83,16 @@ def game_over(username):
     """
     while True:
         try:
-            game_over_choice = input("\nPlease type A or B or EXIT\n").upper()
+            game_over_choice = input(THREE_CHOICES).upper()
             if game_over_choice == "A":
                 run_game(username)
+                break
             elif game_over_choice == "B":
                 intro(username)
+                break
             elif game_over_choice == "EXIT":
                 exit_program(username)
+                break
             else:
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
         except ValueError as e:
@@ -164,7 +167,7 @@ def end(username):
     escaped or did he let you escape, or was it all
     just a bad dream I guess that is up to you {username}
     to decide. If you would like to play the game again
-    type A or if you would like to exit type EXIT\n
+    type A or if you would like to exit type B\n
     """
     display_message(text_msg, SCENARIOS_DURATION)
     """
@@ -174,18 +177,18 @@ def end(username):
     """
     while True:
         try:
-            end_choice = input("\nPlease type either A or EXIT\n").upper()
+            end_choice = input(TWO_CHOICES).upper()
             if end_choice == "A":
                 run_game(username)
                 break
-            elif end_choice == "EXIT":
+            elif end_choice == "B":
                 exit_program(username)
                 break
             else:
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
-            print(f"{e} Please type either A or EXIT\n")
+            print(f"{e} Please type either A or B\n")
 
 
 def final_battle(username):
