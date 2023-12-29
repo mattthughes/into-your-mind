@@ -91,9 +91,9 @@ def game_over(username):
             elif game_over_choice == "EXIT":
                 exit_program(username)
             else:
-                output_delay(WRONG_FORMAT, SCENARIOS_DURATION)
+                display_message(WRONG_FORMAT, SCENARIOS_DURATION)
         except ValueError as e:
-            output_delay("Please enter A or B or EXIT\n")
+            print("Please enter A or B or EXIT\n")
 
 
 class Character:
@@ -185,7 +185,7 @@ def end(username):
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
-            output_delay(f"{e} Please type either A or EXIT\n")
+            print(f"{e} Please type either A or EXIT\n")
 
 
 def final_battle(username):
@@ -196,9 +196,7 @@ def final_battle(username):
     """
     clear()
     text_msg = scenarios.get("final_battle")["message"]
-
     final_choice_a = scenarios.get("final_battle")["final_choice_a"]
-
     final_choice_b = scenarios.get("final_battle")["final_choice_b"]
     display_message(text_msg, SCENARIOS_DURATION)
     """
@@ -210,11 +208,11 @@ def final_battle(username):
         try:
             final_choice = input(TWO_CHOICES).upper()
             if final_choice == "A":
-                output_delay(final_choice_a)
+                display_message(final_choice_a, SCENARIOS_DURATION)
                 end(username)
                 break
             elif final_choice == "B":
-                output_delay(final_choice_b)
+                display_message(final_choice_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif final_choice == "EXIT":
@@ -224,7 +222,7 @@ def final_battle(username):
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
-            output_delay(f"{e} Please type either A or B\n")
+            print(f"{e} Please type either A or B\n")
 
 
 def small_figure(username):
@@ -235,13 +233,9 @@ def small_figure(username):
     """
     clear()
     text_msg = scenarios.get("small_figure")[f"message"]
-
     figure_choice_a = scenarios.get("small_figure")["figure_choice_a"]
-
     figure_choice_b = scenarios.get("small_figure")["figure_choice_b"]
-
     figure_choice_c = scenarios.get("small_figure")["figure_choice_c"]
-
     display_message(text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
@@ -252,15 +246,15 @@ def small_figure(username):
         try:
             figure_choice = input(THREE_CHOICES).upper()
             if figure_choice == "A":
-                output_delay(figure_choice_a)
+                display_message(figure_choice_a, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif figure_choice == "B":
-                output_delay(figure_choice_b)
+                display_message(figure_choice_b, SCENARIOS_DURATION)
                 final_battle(username)
                 break
             elif figure_choice == "C":
-                output_delay(figure_choice_c)
+                display_message(figure_choice_c, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif figure_choice == "EXIT":
@@ -270,7 +264,7 @@ def small_figure(username):
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
-            output_delay(f"{e} Please use the correct format\n")
+            print(f"{e} Please use the correct format\n")
 
 
 def inside_station(username):
@@ -281,12 +275,9 @@ def inside_station(username):
     """
     clear()
     text_msg = scenarios.get("inside_station")["message"]
-
     output_delay(text_msg)
     inside_choice_a = scenarios.get("inside_station")["inside_choice_a"]
-
     inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
-
     inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
     display_message(text_msg, SCENARIOS_DURATION)
     """
@@ -298,15 +289,15 @@ def inside_station(username):
         try:
             inside_choice = input(THREE_CHOICES).upper()
             if inside_choice == "A":
-                output_delay(inside_choice_a)
+                display_message(inside_choice_a, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif inside_choice == "B":
-                output_delay(inside_choice_b)
+                display_message(inside_choice_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif inside_choice == "C":
-                output_delay(inside_choice_c)
+                display_message(inside_choice_c, SCENARIOS_DURATION)
                 small_figure(username)
                 break
             elif inside_choice == "EXIT":
@@ -316,7 +307,7 @@ def inside_station(username):
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
                 continue
         except ValueError as e:
-            output_delay("Please type A or B or C\n")
+            print("Please type A or B or C\n")
 
 
 def journey_home(username):
@@ -326,7 +317,6 @@ def journey_home(username):
     """
     clear()
     text_msg = scenarios.get("journey_home")["message"]
-
     display_message(text_msg, SCENARIOS_DURATION)
     home_option_a = scenarios.get("journey_home")["home_option_a"]
     home_option_b = scenarios.get("journey_home")["home_option_b"]
@@ -339,11 +329,11 @@ def journey_home(username):
         try:
             home_choice = input(TWO_CHOICES).upper()
             if home_choice == "A":
-                output_delay(home_option_a)
+                display_message(home_option_a, SCENARIOS_DURATION)
                 inside_station(username)
                 break
             elif home_choice == "B":
-                output_delay(home_option_b)
+                display_message(home_option_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif home_choice == "EXIT":
@@ -375,11 +365,11 @@ def abandoned_bus(username):
         try:
             bus_choice = input(TWO_CHOICES).upper()
             if bus_choice == "A":
-                output_delay(bus_choice_a)
+                display_message(bus_choice_a, SCENARIOS_DURATION)
                 journey_home(username)
                 break
             elif bus_choice == "B":
-                output_delay(bus_choice_b)
+                display_message(bus_choice_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif bus_choice == "EXIT":
@@ -412,15 +402,15 @@ def open_door(username):
         try:
             door_choice = input(THREE_CHOICES).upper()
             if door_choice == "A":
-                output_delay(door_option_a)
+                display_message(door_option_a, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif door_choice == "B":
-                output_delay(door_option_b)
+                display_message(door_option_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif door_choice == "C":
-                output_delay(door_option_c)
+                display_message(door_option_c, SCENARIOS_DURATION)
                 abandoned_bus(username)
                 break
             elif door_choice == "EXIT":
@@ -453,15 +443,15 @@ def escaped_classroom(username):
         try:
             escaped_choice = input(THREE_CHOICES).upper()
             if escaped_choice == "A":
-                output_delay(escaped_choice_a)
+                display_message(escaped_choice_a,)
                 open_door(username)
                 break
             elif escaped_choice == "B":
-                output_delay(escaped_choice_b)
+                display_message(escaped_choice_b, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif escaped_choice == "C":
-                output_delay(escaped_choice_c)
+                display_message(escaped_choice_c, SCENARIOS_DURATION)
                 game_over(username)
                 break
             elif escaped_choice == "EXIT":
@@ -556,7 +546,7 @@ def view_instructions(username):
             else:
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
         except ValueError as e:
-            output_delay("Invalid format please use the correct format\n")
+            print("Invalid format please use the correct format\n")
 
 
 def intro(username):
@@ -583,7 +573,7 @@ def intro(username):
             else:
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
         except ValueError as e:
-            output_delay(f"\n {e} please pick the correct one\n")
+            print(f"\n {e} please pick the correct one\n")
 
 
 if __name__ == "__main__":
