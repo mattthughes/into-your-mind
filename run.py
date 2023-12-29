@@ -7,7 +7,6 @@ from colorama import init
 init(convert=True)
 
 
-
 "Constant variables"
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
 TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
@@ -106,7 +105,8 @@ class Character:
         while True:
             username = input(Fore.WHITE + "\nWhat is your name\n")
             if not username or not username.isalpha():
-                print("Enter your name with alphabet letters.\n")
+                display_message(WRONG_FORMAT, SCENARIOS_DURATION)
+                print("Please enter your name with alphabet letters")
             else:
                 intro(username)
                 break

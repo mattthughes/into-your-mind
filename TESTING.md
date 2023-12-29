@@ -43,6 +43,7 @@ Welcome to the testing results of the text based action adventure game known as 
 * Fixed colorama errors as when I changed the font to red, the rest of the text would remain red. In order to fix this I changed the font back to white for all scenarios and loading outputs.
 * Fixed colorama errors on deployed heroku application. In order to fix this I updated the requirements.txt file using the pip3 freeze > requirements.txt method which fixed this issue.
 * Fixed Class bugs by defining username as an empty string and then passing this new variable into the introduction file. When I needed to use the class I created a variable called p1 which stands for player one. This allowed me to have multiple characters if I needed to. To use the variable p1 I also used dot notation to get the function introduction which fixed these issues.
+* Fixed colorama bugs by adding in display message function to intro as the print statement was not changing the colour to red adding the display message function fixed this issue.
 
 ### Known bugs
 
