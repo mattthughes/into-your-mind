@@ -6,7 +6,6 @@ from colorama import Fore, Back, Style
 from colorama import init
 init(convert=True)
 
-
 "Constant variables"
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
 TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
@@ -88,7 +87,7 @@ def game_over(username):
             if game_over_choice == "A":
                 run_game(username)
             elif game_over_choice == "B":
-                welcome_message()
+                intro(username)
             elif game_over_choice == "EXIT":
                 exit_program(username)
             else:
