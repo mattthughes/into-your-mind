@@ -48,7 +48,7 @@ Welcome to the testing results of the text based action adventure game known as 
 ### Known bugs
 
 * Was many bugs for the timer tried using multiprocessing and threading to run two loops coccurently. However there were to many issues so this was removed from the final project.
-* No other known bugs.
+* The user can type any input during the scenarios where the text will become jumbled due to this and will then record the input such as if the input is wrong it will print that twice if both inputs were wrong etc this will continue until the user has stopped typing. The fixes I tried to implement was using the keyboard module but that could not be used as I didn't have root access, and this was not compatiable with heroku. I also tried pynput which had a server issue along with alot of other fixes which unfortunately could not be used.
 
 ### Manual Testing
 
