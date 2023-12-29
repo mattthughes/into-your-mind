@@ -8,7 +8,7 @@ init(convert=True)
 
 "Constant variables"
 THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C or EXIT.\n"
-TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B or EXIT.\n"
+TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
 WRONG_FORMAT = Fore.RED + "\nPlease use the correct format\n"
 GAME_OVER_MESSAGE_DURATION = 0.02
 GAME_TITLE_MESSAGE_DURATION = 0.04
