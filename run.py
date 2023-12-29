@@ -7,8 +7,8 @@ from colorama import init
 init(convert=True)
 
 "Constant variables"
-THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C.\n"
-TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
+THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C or EXIT.\n"
+TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B or EXIT.\n"
 WRONG_FORMAT = Fore.RED + "\nPlease use the correct format\n"
 GAME_OVER_MESSAGE_DURATION = 0.02
 GAME_TITLE_MESSAGE_DURATION = 0.04
@@ -446,7 +446,7 @@ def escaped_classroom(username):
         try:
             escaped_choice = input(THREE_CHOICES).upper()
             if escaped_choice == "A":
-                display_message(escaped_choice_a,)
+                display_message(escaped_choice_a, SCENARIOS_DURATION)
                 open_door(username)
                 break
             elif escaped_choice == "B":
