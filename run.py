@@ -86,9 +86,11 @@ def game_over(username):
             game_over_choice = input(THREE_CHOICES).upper()
             if game_over_choice == "A":
                 run_game(username)
+                time.sleep(1)
                 break
             elif game_over_choice == "B":
                 intro(username)
+                time.sleep(1)
                 break
             elif game_over_choice == "EXIT":
                 exit_program(username)
@@ -156,7 +158,7 @@ def end(username):
     ▀▀▄▄▄▀▀▄▄▄▄▀▀▄▄▄▄▀▀▀▀▀▄▄▄▀▄▄▄▀▀▄▄▄▀▄▄▄▀▀▄▄▀
     """
 
-    display_message(Fore.GREEN, win_msg, WIN_MESSAGE_DURATION)
+    display_message(Fore.GREEN + win_msg, WIN_MESSAGE_DURATION)
 
     text_msg = f"""
     Congratulations you have beaten the game,
@@ -169,7 +171,7 @@ def end(username):
     to decide. If you would like to play the game again
     type A or if you would like to exit type B\n
     """
-    display_message(text_msg, SCENARIOS_DURATION)
+    display_message(Fore.WHITE + text_msg, SCENARIOS_DURATION)
     """
     Using a while loop to get the user input
     and to keep running the loop until specific
@@ -212,10 +214,12 @@ def final_battle(username):
             final_choice = input(TWO_CHOICES).upper()
             if final_choice == "A":
                 display_message(final_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 end(username)
                 break
             elif final_choice == "B":
                 display_message(final_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif final_choice == "EXIT":
@@ -250,14 +254,17 @@ def small_figure(username):
             figure_choice = input(THREE_CHOICES).upper()
             if figure_choice == "A":
                 display_message(figure_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif figure_choice == "B":
                 display_message(figure_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 final_battle(username)
                 break
             elif figure_choice == "C":
                 display_message(figure_choice_c, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif figure_choice == "EXIT":
@@ -292,14 +299,17 @@ def inside_station(username):
             inside_choice = input(THREE_CHOICES).upper()
             if inside_choice == "A":
                 display_message(inside_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif inside_choice == "B":
                 display_message(inside_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif inside_choice == "C":
                 display_message(inside_choice_c, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 small_figure(username)
                 break
             elif inside_choice == "EXIT":
@@ -332,10 +342,12 @@ def journey_home(username):
             home_choice = input(TWO_CHOICES).upper()
             if home_choice == "A":
                 display_message(home_option_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 inside_station(username)
                 break
             elif home_choice == "B":
                 display_message(home_option_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif home_choice == "EXIT":
@@ -368,10 +380,12 @@ def abandoned_bus(username):
             bus_choice = input(TWO_CHOICES).upper()
             if bus_choice == "A":
                 display_message(bus_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 journey_home(username)
                 break
             elif bus_choice == "B":
                 display_message(bus_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif bus_choice == "EXIT":
@@ -405,14 +419,17 @@ def open_door(username):
             door_choice = input(THREE_CHOICES).upper()
             if door_choice == "A":
                 display_message(door_option_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif door_choice == "B":
                 display_message(door_option_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif door_choice == "C":
                 display_message(door_option_c, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 abandoned_bus(username)
                 break
             elif door_choice == "EXIT":
@@ -446,14 +463,17 @@ def escaped_classroom(username):
             escaped_choice = input(THREE_CHOICES).upper()
             if escaped_choice == "A":
                 display_message(escaped_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 open_door(username)
                 break
             elif escaped_choice == "B":
                 display_message(escaped_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif escaped_choice == "C":
                 display_message(escaped_choice_c, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif escaped_choice == "EXIT":
@@ -488,14 +508,17 @@ def run_game(username):
             first_choice = input(THREE_CHOICES).upper()
             if first_choice == "A":
                 display_message(first_choice_a, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif first_choice == "B":
                 display_message(first_choice_b, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 game_over(username)
                 break
             elif first_choice == "C":
                 display_message(first_choice_c, SCENARIOS_DURATION)
+                time.sleep(0.5)
                 escaped_classroom(username)
                 break
             elif first_choice == "EXIT":
