@@ -7,8 +7,8 @@ from colorama import init
 init(convert=True)
 
 "Constant variables"
-THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C or EXIT.\n"
-TWO_CHOICES = Fore.WHITE + "\nPlease type either A or B.\n"
+MULTIPLE_CHOICES = Fore.WHITE + "\nPlease type either A or B or C or EXIT.\n"
+THREE_CHOICES = Fore.WHITE + "\nPlease type either A or B or EXIT.\n"
 WRONG_FORMAT = Fore.RED + "\nPlease use the correct format\n"
 GAME_OVER_MESSAGE_DURATION = 0.02
 GAME_TITLE_MESSAGE_DURATION = 0.04
@@ -169,7 +169,8 @@ def end(username):
     escaped or did he let you escape, or was it all
     just a bad dream I guess that is up to you {username}
     to decide. If you would like to play the game again
-    type A or if you would like to exit type B\n
+    type A or if you would like to return to the main menu type B
+    or if you would like to exit type EXIT\n
     """
     display_message(Fore.WHITE + text_msg, SCENARIOS_DURATION)
     """
@@ -179,11 +180,14 @@ def end(username):
     """
     while True:
         try:
-            end_choice = input(TWO_CHOICES).upper()
+            end_choice = input(THREE_CHOICES).upper()
             if end_choice == "A":
                 run_game(username)
                 break
             elif end_choice == "B":
+                intro(username)
+                break
+            elif end_choice == "EXIT":
                 exit_program(username)
                 break
             else:
@@ -211,7 +215,7 @@ def final_battle(username):
     """
     while True:
         try:
-            final_choice = input(TWO_CHOICES).upper()
+            final_choice = input(THREE_CHOICES).upper()
             if final_choice == "A":
                 display_message(final_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -251,7 +255,7 @@ def small_figure(username):
     """
     while True:
         try:
-            figure_choice = input(THREE_CHOICES).upper()
+            figure_choice = input(MULTIPLE_CHOICES).upper()
             if figure_choice == "A":
                 display_message(figure_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -296,7 +300,7 @@ def inside_station(username):
     """
     while True:
         try:
-            inside_choice = input(THREE_CHOICES).upper()
+            inside_choice = input(MULTIPLE_CHOICES).upper()
             if inside_choice == "A":
                 display_message(inside_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -339,7 +343,7 @@ def journey_home(username):
     """
     while True:
         try:
-            home_choice = input(TWO_CHOICES).upper()
+            home_choice = input(THREE_CHOICES).upper()
             if home_choice == "A":
                 display_message(home_option_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -377,7 +381,7 @@ def abandoned_bus(username):
     """
     while True:
         try:
-            bus_choice = input(TWO_CHOICES).upper()
+            bus_choice = input(THREE_CHOICES).upper()
             if bus_choice == "A":
                 display_message(bus_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -416,7 +420,7 @@ def open_door(username):
     """
     while True:
         try:
-            door_choice = input(THREE_CHOICES).upper()
+            door_choice = input(MULTIPLE_CHOICES).upper()
             if door_choice == "A":
                 display_message(door_option_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -460,7 +464,7 @@ def escaped_classroom(username):
     """
     while True:
         try:
-            escaped_choice = input(THREE_CHOICES).upper()
+            escaped_choice = input(MULTIPLE_CHOICES).upper()
             if escaped_choice == "A":
                 display_message(escaped_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -505,7 +509,7 @@ def run_game(username):
     """
     while True:
         try:
-            first_choice = input(THREE_CHOICES).upper()
+            first_choice = input(MULTIPLE_CHOICES).upper()
             if first_choice == "A":
                 display_message(first_choice_a, SCENARIOS_DURATION)
                 time.sleep(0.5)
@@ -559,7 +563,7 @@ def view_instructions(username):
     """
     while True:
         try:
-            start = input(TWO_CHOICES).upper()
+            start = input(THREE_CHOICES).upper()
             if start == "A":
                 run_game(username)
                 break
@@ -582,18 +586,22 @@ def intro(username):
     clear()
     text_msg = f"""
     Welcome to Into Your Mind {username} if you would like to Start the game
-    type A or if you would like to view the instructions type B
+    type A or if you would like to view the instructions type B or Exit to EXIT
+    the application.
     """
     display_message(text_msg, SCENARIOS_DURATION)
 
     while True:
         try:
-            intro_msg = input(TWO_CHOICES).upper()
+            intro_msg = input(THREE_CHOICES).upper()
             if intro_msg == "A":
                 run_game(username)
                 break
             elif intro_msg == "B":
                 view_instructions(username)
+                break
+            elif intro_msg == "EXIT":
+                exit_program(username)
                 break
             else:
                 display_message(WRONG_FORMAT, SCENARIOS_DURATION)
