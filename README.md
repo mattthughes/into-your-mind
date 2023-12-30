@@ -197,6 +197,7 @@ would just display the whole text making this difficult to read for the user whi
 - [Fsy symbols](https://fsymbols.com/text-art/)
 - [Heroku](https://www.heroku.com/)
 - [Python Validator](https://pep8ci.herokuapp.com/#)
+- [Colorama](https://pypi.org/project/colorama/)
 
 ## Deployment 
 
