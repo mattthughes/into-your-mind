@@ -46,7 +46,7 @@ def exit_program(username):
     """
     clear()
     display_message("Exiting Game.....\n", LOADING_ELEMENTS_DURATION)
-    output_delay(f"\nThank you for playing {username}")
+    display_message(f"\nThank you for playing {username}", SCENARIOS_DURATION)
     sys.exit()
 
 
@@ -586,8 +586,8 @@ def intro(username):
     clear()
     text_msg = f"""
     Welcome to Into Your Mind {username} if you would like to Start the game
-    type A or if you would like to view the instructions type B or Exit to EXIT
-    the application.
+    type A or if you would like to view the instructions type B or
+    type Exit to EXIT the application.
     """
     display_message(text_msg, SCENARIOS_DURATION)
 
