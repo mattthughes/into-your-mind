@@ -30,6 +30,7 @@ Welcome to Into Your Mind this app was created with Python and deployed with Her
         - [Congratulations screen](#congratulations-screen)
     - [Languages](#languages)
     - [Frameworks and tools](#frameworks--tools)
+        - [Frameworks Explanation ](#frameworks-explanation)
     - [Deployment](#deployment)
         - [How to deploy](#how-to-deploy)
         - [How to fork](#how-to-fork)
@@ -198,6 +199,14 @@ would just display the whole text making this difficult to read for the user whi
 - [Heroku](https://www.heroku.com/)
 - [Python Validator](https://pep8ci.herokuapp.com/#)
 - [Colorama](https://pypi.org/project/colorama/)
+
+### Frameworks Explanation 
+
+* During the project I used many frameworks and libraries in order to complete this project. The libraries I used were all very important such as the time library this allowed me to use time.sleep and also allowed me to create the display message function which could control the output of the text.
+
+* I used colorama to accurately display errors in red, the winning screen in green and finally all normal text in white. I did this to convey to the player where there was an issue and when they were successful this would not have been possible without the Colorama library.
+
+* I used sys to exit the application, this was useful as it allowed me to control when the user would exit the application. This was done by the input exit. If the user typed exit the application would first load the exit program function and execute the code in this function. The exit program function would finally exit the program, once all the code in the exit program function had been executed.
 
 ## Deployment 
 
