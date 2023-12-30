@@ -278,7 +278,6 @@ def inside_station(username):
     """
     clear()
     text_msg = scenarios.get("inside_station")["message"]
-    output_delay(text_msg)
     inside_choice_a = scenarios.get("inside_station")["inside_choice_a"]
     inside_choice_b = scenarios.get("inside_station")["inside_choice_b"]
     inside_choice_c = scenarios.get("inside_station")["inside_choice_c"]
